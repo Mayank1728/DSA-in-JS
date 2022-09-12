@@ -41,3 +41,4 @@ function bubbleSort(arr) {
   console.log(arr);
 }
 bubbleSort([5, 10, 134, 2, 3, 8, 16, 4, 2]);
+// Time complexity: O(n^2)
