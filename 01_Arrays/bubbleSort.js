@@ -8,7 +8,7 @@
         Pass 2: [20, 10, 30, 40]
         Pass 3: [10, 20, 30, 40]
      
-     It will always take exactly n-1 (3 passes) to sort the array
+     It will always take exactly n-1 pases(3 passes in above example) to sort the array
     Therefore the outer for loop runs n-1 times
   
   2. Now inner for loop j = 0 and goes till j < arr.length - 1 - passes. BUT WHY ??
@@ -22,7 +22,8 @@
         Pass 3: [10,| 20, 30, 40]  3 element is in its correct position
         The 1 remaining element is always in its sorted position.
         
-    j < (arr.length - passes)  because after 1st pass we don't need to check the last element. Similarly after 2nd pass we don't need to check the 2nd to last element and so on...
+    j < (arr.length - passes)  because after 1st pass we don't need to check the last element.
+    Similarly after 2nd pass we don't need to check the 2nd to last element and so on...
 
 */
 function bubbleSort(arr) {
