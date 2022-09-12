@@ -24,7 +24,7 @@ function selectionSort(arr) {
   }
   console.log(arr);
 }
-selectionSort([1, 5, 10, 2, 100, 18, 72]);
+selectionSort([5, 10, 2, 100, 18, -5, 0, 5, 72]);
 /*
     Time complexity => O(n^2) why ?
 
