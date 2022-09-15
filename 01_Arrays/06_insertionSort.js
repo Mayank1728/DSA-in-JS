@@ -10,7 +10,29 @@
   [2,3,4,5|,1]
   [1,2,3,4,5]
 
-  Time and space complexity
 */
 
-function insertionSort(arr) {}
+// TC (test case [2, 4, 5, 3])
+//  0  1  2  3 (indexes)
+// [2, 4, 5, 3]
+// [2, 4, 5, 5]
+// [2, 4, 4, 5]
+// [2, 3, 5, 5]
+
+function insertionSort(arr) {
+  //start with i = 1
+  for (let i = 1; i < arr.length; i++) {
+    let curr = arr[i];
+    let index = i;
+    for (let j = i - 1; j > -1; j--) {
+      if (arr[j] > curr) {
+        arr[index--] = arr[j];
+      } else {
+        break;
+      }
+    }
+    arr[index] = curr;
+  }
+  console.log(arr);
+}
+insertionSort([10, 20, 0, 4, 5, 6, 19]);
