@@ -27,6 +27,7 @@ function insertionSort(arr) {
     for (let j = i - 1; j > -1; j--) {
       if (arr[j] > curr) {
         arr[index--] = arr[j];
+        // decrease value of index after using it AKA post decrement
       } else {
         break;
       }
@@ -35,4 +36,4 @@ function insertionSort(arr) {
   }
   console.log(arr);
 }
-insertionSort([10, 20, 0, 4, 5, 6, 19]);
+insertionSort([10, 20, 6, 0, 4, 5, 6, 19]);
