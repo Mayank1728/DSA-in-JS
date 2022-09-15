@@ -12,7 +12,7 @@
 
 */
 
-// TC (test case [2, 4, 5, 3])
+// sample TC (test case [2, 4, 5, 3])
 //  0  1  2  3 (indexes)
 // [2, 4, 5, 3]
 // [2, 4, 5, 5]
@@ -37,3 +37,21 @@ function insertionSort(arr) {
   console.log(arr);
 }
 insertionSort([10, 20, 6, 0, 4, 5, 6, 19]);
+
+// Time complexity : O(n^2) why ?
+/*
+  lets say all the elements are sorted except the last one;
+  Now no of comparisons made to sort it in the worst case(this
+  means that the last element is the smallest number) is n - 1.
+  Similarly for 2nd to last element no of comparisons made in 
+  worst case is n - 2 and so on.... 
+  Only 1 comparison is made when i = 0
+  Therefore time taken in the worst case is 
+  = (n-1) + (n-2) + (n-3) + .... + 3 + 2 + 1
+  = (n * (n-1)) / 2
+  Considering ONLY the MOST DOMINANT term
+  Time Complexity is O(n^2)
+  
+*/
+
+// Space complexiy : O(1)
