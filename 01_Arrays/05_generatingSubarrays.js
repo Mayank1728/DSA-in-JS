@@ -42,5 +42,6 @@ generateSubarrays([5, 2, 3]);
   (n*(n + 1))/2
  */
 /*
-  Time complexity: O(n^2) why ?
+  Time complexity: O(n^3)
+  space complexity: O(n)
 */
