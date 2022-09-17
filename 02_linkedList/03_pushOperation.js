@@ -1,5 +1,6 @@
 // class always starts with a capital letter
 /* 
+  Push means adding a node at the end of the linkedList
   Push method implementation in js
    1. if the linkedList is empty
      1.1 the pushed value becomes head as well as the tail 

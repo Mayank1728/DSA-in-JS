@@ -54,7 +54,8 @@ class SinglyLinkedList {
       return this.head;
     }
 
-    // function calling itself
+    // function calling itself but this time
+    // I am passing node.next and val
     this.pushRec(node.next, val);
   }
 }

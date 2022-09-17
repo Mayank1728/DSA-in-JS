@@ -1,17 +1,5 @@
-// class always starts with a capital letter
-/* 
-  Pop means removing a node at the end of the linkedList
-  Pop method implementation in js
-  1. if the the linkedlist is empty, 
-    1.1 return error
-  2. else if the linklist contains 1 node, 
-    2.1 head = null and tail = null, 
-    2.2 length--
-  3. else go to the 2nd to last node and make its next = null.
-    3.1 Also make this 2nd to last node as the new tail
-    3.2 length--
+// will update the popRec() function later
 
-*/
 class Node {
   constructor(val) {
     this.val = val;
@@ -68,16 +56,5 @@ class SinglyLinkedList {
     // finally decreae the length of the linkedList
     this.length--;
   }
+  popRec(node, val) {}
 }
-
-// playlist is an empty linkedList
-let playList = new SinglyLinkedList();
-playList.push('Eyes blue like the atlantic');
-playList.push('If I killed someone for you');
-playList.push('Change my clothes');
-playList.pop();
-playList.push("The devil doesn't bargain");
-playList.push('Jesus in LA');
-playList.push('Dopamine Addict');
-playList.pop();
-console.log(playList);
