@@ -42,7 +42,7 @@ class SinglyLinkedList {
     if (!this.length) {
       // will evaluate to true when length = 0
       console.log('ERROR Empty linkedList!!');
-      return 1;
+      return null;
     }
     if (this.length === 1) {
       this.head = null;
@@ -64,7 +64,8 @@ class SinglyLinkedList {
   }
   shift() {
     if (!this.length) {
-      console.log('LinkedList is empty!!');
+      console.log('ERROR LinkedList is empty!!');
+      return null;
     }
     if (this.length === 1) {
       this.head = null;
@@ -84,13 +85,15 @@ class SinglyLinkedList {
 
 // playlist is an empty linkedList
 let playList = new SinglyLinkedList();
+playList.shift();
 playList.push('Eyes blue like the atlantic');
 playList.push('If I killed someone for you');
 playList.push('Change my clothes');
 playList.pop();
+playList.shift();
 playList.push("The devil doesn't bargain");
 playList.push('Jesus in LA');
 playList.push('Dopamine Addict');
-playList.pop();
 playList.shift();
+playList.pop();
 console.log(playList);
