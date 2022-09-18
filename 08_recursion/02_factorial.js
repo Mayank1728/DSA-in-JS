@@ -2,7 +2,6 @@
   What is 5! ?
    5 * 4 * 3 * 2 * 1
          OR
- 
   What is 5! ?
    5 * 4!
 
@@ -26,7 +25,11 @@
       returns 4 * 6 = 24
 
     returns 5 * 24 = 120
-                       
+  
+  Here the pattern for n! is
+  n! = n * (n-1)!
+  (n-1)! = (n-1) * (n-2)!
+  
  */
 function factorial(n) {
   if (n === 1) {
