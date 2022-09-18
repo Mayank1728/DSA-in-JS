@@ -1,18 +1,10 @@
 /*
-  Delete method: Delete a linkedList node of a given value
-  Procedure:
-  1. if the linkedList is empty, return null
-  2. if the first node contains the value
-     2.1 store the 1st node
-     2.2 make the 2nd node as new head
-     2.3 remove the connection between old head and new head
-  3. else let prev = head and let curr = head.next
-     3.1 if curr.val === val, 
-        3.1.1 prev.next = curr.next
-        3.1.2 curr.next = null
-        3.1.3 return true
-     3.2 else curr = curr.next and prev = prev.next
+  Show method
+  Traverse the linked list and console.log the values
+  until you reach end of the linkedList.
+
 */
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -130,36 +122,6 @@ class SinglyLinkedList {
       traverse = traverse.next;
     }
   }
-  delete(val) {
-    if (!this.head) {
-      console.log('Empty LinkedList!!');
-      return null;
-    }
-    // first node contains the value
-    if (this.head.val === val) {
-      console.log('Element was found at 0th position');
-      let h = this.head;
-      this.head = h.next;
-      h.next = null;
-      this.length--;
-      return true;
-    }
-    let prev = this.head;
-    let curr = this.head.next;
-    while (curr != null) {
-      if (curr.val === val) {
-        console.log('value found and deleted');
-        prev.next = curr.next;
-        curr.next = null;
-        this.length--;
-        return true;
-      }
-      curr = curr.next;
-      prev = prev.next;
-    }
-    console.log('node value was not found');
-    return null; // node value was not found
-  }
 }
 
 // playlist is an empty linkedList
@@ -170,7 +132,4 @@ playList.push('Change my clothes');
 playList.push("The devil doesn't bargain");
 playList.push('Jesus in LA');
 playList.push('Dopamine Addict');
-console.log(playList.length);
-console.log();
-playList.delete('Welcome to Brixton');
-console.log(playList.length);
+playList.show();
