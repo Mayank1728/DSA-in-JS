@@ -116,6 +116,7 @@ class SinglyLinkedList {
       return null;
     }
   }
+  searchRec(val) {}
 }
 
 // playlist is an empty linkedList
