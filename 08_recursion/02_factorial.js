@@ -1,21 +1,11 @@
-function factorial(n) {
-  if (n === 1) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
-  }
-}
-console.log(factorial(5));
-
 /*
-  
   What is 5! ?
    5 * 4 * 3 * 2 * 1
          OR
  
   What is 5! ?
    5 * 4!
-   
+
       What is 4! ?
           4 * 3!
 
@@ -36,6 +26,13 @@ console.log(factorial(5));
       returns 4 * 6 = 24
 
     returns 5 * 24 = 120
-                        
-
+                       
  */
+function factorial(n) {
+  if (n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+console.log(factorial(5));
