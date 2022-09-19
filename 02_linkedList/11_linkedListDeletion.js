@@ -142,6 +142,7 @@ class SinglyLinkedList {
       this.head = h.next;
       h.next = null;
       this.length--;
+      this.show();
       return true;
     }
     let prev = this.head;
@@ -152,6 +153,7 @@ class SinglyLinkedList {
         prev.next = curr.next;
         curr.next = null;
         this.length--;
+        this.show();
         return true;
       }
       curr = curr.next;
