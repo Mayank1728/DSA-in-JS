@@ -1,4 +1,5 @@
 /*
+  complete the procedure
   Delete method: Delete a linkedList node of a given index
   Procedure:
   1. if linkedList is empty, return null
