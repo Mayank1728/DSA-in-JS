@@ -2,7 +2,7 @@
    Implementing Stack using Linked List
     1. push(val) to insert values on top of the stack
     2. pop() to remove values from the top of the stack
-    3. top() display or show current value at the top of stack
+    3. top() display current value at the top of stack
     4. show() to display all the values in the stack(top to bottom)
 */
 
@@ -82,3 +82,4 @@ books.push('The selfish gene');
 books.top();
 books.pop(); // the selfish gene out
 books.top();
+console.log(books.length);
