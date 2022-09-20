@@ -8,6 +8,9 @@
     I am implementing the top function with the alias
     peek() because js is getting confused whether
     I am calling top property or top method LOL!
+
+    push operation: O(1) time
+    pop operation: O(1) time
 */
 class Stack {
   constructor() {
