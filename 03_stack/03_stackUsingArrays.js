@@ -43,6 +43,13 @@ class Stack {
       console.log(this.data[i]);
     }
   }
+  isEmpty() {
+    if (this.top <= -1) {
+      console.log('The stack is empty');
+      return true;
+    }
+    return false;
+  }
 }
 let color = new Stack();
 color.push('R');
@@ -52,3 +59,4 @@ color.peek();
 color.pop();
 console.log(color);
 color.show();
+console.log(color.isEmpty());
