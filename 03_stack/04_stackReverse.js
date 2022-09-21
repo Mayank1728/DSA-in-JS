@@ -1,9 +1,5 @@
 /* 
-   Reverse a stack
-   
-   Method 1:
-   1.  
-   
+   Reverse a stack(the original stack should contain reversed elements)   
 
 */
 
@@ -66,12 +62,5 @@ let temp1 = new Stack();
 while (books.length) {
   temp1.push(books.pop());
 }
-let temp2 = new Stack();
-while (temp1.length) {
-  temp2.push(temp1.pop());
-}
-console.log();
-while (temp2.length) {
-  books.push(temp2.pop());
-}
+books = temp1;
 books.show();
