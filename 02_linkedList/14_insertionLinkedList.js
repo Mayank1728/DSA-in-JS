@@ -1,5 +1,5 @@
 /*
-  insert method: insert a given value as a node at a particular index
+  insert method: insert a given value at a particular index inside linkedList
 
 */
 
