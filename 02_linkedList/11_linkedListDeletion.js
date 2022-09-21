@@ -12,6 +12,7 @@
         3.1.2 curr.next = null
         3.1.3 return true
      3.2 else curr = curr.next and prev = prev.next
+  4. update the tail if tail changes
 */
 class Node {
   constructor(val) {
@@ -137,11 +138,16 @@ class SinglyLinkedList {
     }
     // first node contains the value
     if (this.head.val === val) {
-      console.log('Element was found at 0th position');
-      let h = this.head;
-      this.head = h.next;
-      h.next = null;
+      let oldHead = this.head;
+      this.head = oldHead.next;
+      oldHead.next = null;
       this.length--;
+
+      // if linkedList contained only 1 node and that node is deleted
+      // this means linkedList now empty, head = null and tail = null
+      // so update the tail
+      if (!this.head) this.tail = null;
+
       this.show();
       return true;
     }
@@ -149,10 +155,15 @@ class SinglyLinkedList {
     let curr = this.head.next;
     while (curr != null) {
       if (curr.val === val) {
-        console.log('value found and deleted');
         prev.next = curr.next;
         curr.next = null;
         this.length--;
+
+        //if user deleted the tail/last node
+        // prev.next is null
+        // so we update this.tail = prev
+        if (!prev.next) this.tail = prev;
+
         this.show();
         return true;
       }
@@ -174,5 +185,5 @@ playList.push('Jesus in LA');
 playList.push('Dopamine Addict');
 console.log(playList.length);
 console.log();
-playList.delete('Welcome to Brixton');
-console.log(playList.length);
+playList.delete('Dopamine Addict');
+console.log(playList.tail);
