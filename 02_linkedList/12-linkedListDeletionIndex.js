@@ -172,6 +172,8 @@ class SinglyLinkedList {
         let oldHead = this.head;
         this.head = oldHead.next;
         oldHead.next = null;
+        // update the this.tail if linkedList contains ONLY 1 node
+        if (!this.head.next) this.tail = this.head.next;
         // now the oldHead doesn't refer to the next node
         this.length--;
         return true;
@@ -184,7 +186,13 @@ class SinglyLinkedList {
           if (index === counter) {
             prev.next = curr.next;
             curr.next = null;
+            // update this.tail if user deleted the tail node
+            // condition will be true when prev.next is null
+            // this means we deleted the last node
+            // so we update this.tail = prev
+            if (!prev.next) this.tail = prev;
             this.length--;
+            this.show();
             return true;
           }
           curr = curr.next;
@@ -210,8 +218,5 @@ playList.push('Change my clothes');
 playList.push("The devil doesn't bargain");
 playList.push('Jesus in LA');
 playList.push('Dopamine Addict');
-playList.show();
-playList.deli(-1);
-console.log();
-playList.show();
-console.log(playList.length);
+playList.deli(5);
+console.log(playList.tail);
