@@ -1,5 +1,13 @@
 /*
   insert method: insert a given value at a particular index inside linkedList
+  
+  Pseudocode:
+  if index === 0
+    make this node the head
+  else if index === linked list length
+    push(val)
+  else
+    insert new node at index and unshift all next nodex
 
 */
 
@@ -121,15 +129,39 @@ class SinglyLinkedList {
     }
   }
   insert(val, index) {
-    if (!this.head) return null;
+    if (!this.head) return false;
+    if (index < 0) {
+      console.log('Index value should be greater than 0');
+      return false;
+    }
     if (index === 0) {
       this.unshift(val);
+      this.show();
       return true;
     } else {
-      let counter = 0;
+      let counter = 1;
       let prev = this.head;
-      let curr = this.tail;
-      while (curr) {}
+      let curr = this.head.next;
+      while (curr) {
+        if (counter === index) {
+          let insertNode = new Node(val);
+          prev.next = insertNode;
+          insertNode.next = curr;
+          this.length++;
+          this.show();
+          return true;
+        }
+        prev = prev.next;
+        curr = curr.next;
+        counter++;
+      }
+      if (counter === index) {
+        this.push(val);
+        this.show();
+        return true;
+      }
+      console.log('Index out of bounds!');
+      return false;
     }
   }
 }
@@ -142,4 +174,4 @@ playList.push('Change my clothes');
 playList.push("The devil doesn't bargain");
 playList.push('Jesus in LA');
 playList.push('Dopamine Addict');
-playList.show();
+playList.insert('Mind is a prison', 6);
