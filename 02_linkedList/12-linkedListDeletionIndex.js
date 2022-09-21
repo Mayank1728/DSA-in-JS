@@ -1,6 +1,7 @@
 /*
   complete the procedure
   Delete method: Delete a linkedList node of a given index
+  deli(index) function
   Procedure:
   1. if linkedList is empty, return null
   2. if index >= 0
@@ -137,11 +138,16 @@ class SinglyLinkedList {
     }
     // first node contains the value
     if (this.head.val === val) {
-      console.log('Element was found at 0th position');
-      let h = this.head;
-      this.head = h.next;
-      h.next = null;
+      let oldHead = this.head;
+      this.head = oldHead.next;
+      oldHead.next = null;
       this.length--;
+
+      // if linkedList contained only 1 node and that node is deleted
+      // this means linkedList now empty, head = null and tail = null
+      // so update the tail
+      if (!this.head) this.tail = null;
+
       this.show();
       return true;
     }
@@ -149,10 +155,15 @@ class SinglyLinkedList {
     let curr = this.head.next;
     while (curr != null) {
       if (curr.val === val) {
-        console.log('value found and deleted');
         prev.next = curr.next;
         curr.next = null;
         this.length--;
+
+        //if user deleted the tail/last node
+        // prev.next is null
+        // so we update this.tail = prev
+        if (!prev.next) this.tail = prev;
+
         this.show();
         return true;
       }
@@ -172,10 +183,12 @@ class SinglyLinkedList {
         let oldHead = this.head;
         this.head = oldHead.next;
         oldHead.next = null;
-        // update the this.tail if linkedList contains ONLY 1 node
-        if (!this.head.next) this.tail = this.head.next;
-        // now the oldHead doesn't refer to the next node
-        this.length--;
+
+        // if linkedList contained only 1 node and that node is deleted
+        // this means linkedList now empty, head = null and tail = null
+        // so update the tail
+        if (!this.head) this.tail = null;
+
         return true;
       } else {
         let counter = 1;
@@ -186,12 +199,14 @@ class SinglyLinkedList {
           if (index === counter) {
             prev.next = curr.next;
             curr.next = null;
+            this.length--;
+
             // update this.tail if user deleted the tail node
             // condition will be true when prev.next is null
             // this means we deleted the last node
             // so we update this.tail = prev
             if (!prev.next) this.tail = prev;
-            this.length--;
+
             this.show();
             return true;
           }
