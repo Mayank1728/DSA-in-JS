@@ -10,7 +10,7 @@
           2.1.3 update the length
       2.2 else
           2.2.1 counter = 1, prev = head, curr = head.next
-          2.2.2 trave
+          2.2.2 traverse
   
 */
 class Node {
@@ -164,11 +164,15 @@ class SinglyLinkedList {
   }
   deli(index) {
     if (!this.head) return null;
+    // check whether index is greater than -1
     if (index >= 0) {
+      // if the user wants to delete the head node
+      // we need to update this.head and length
       if (index === 0) {
-        let h = this.head;
-        this.head = h.next;
-        h.next = null;
+        let oldHead = this.head;
+        this.head = oldHead.next;
+        oldHead.next = null;
+        // now the oldHead doesn't refer to the next node
         this.length--;
         return true;
       } else {
@@ -187,6 +191,7 @@ class SinglyLinkedList {
           prev = prev.next;
           counter++;
         }
+        // the index entered was greater than the length of the linkedList
         console.log('Node cannot be DELETED as Index OUT OF BOUNDS!!');
         return false;
       }
