@@ -1,9 +1,19 @@
 /* 
-   Searching method by passing value
-   1. if the linked list is empty return null
-   2. else traverse the linked list looking for the value
-     2.1 if value is found console log index and value
-     2.2 if value not found then return value NOT found!
+   Search the linkedList recursively
+   parameters: (value, node)
+   
+   IMP NOTE: recursive function STOPS ONLY when you write RETURN STATEMENTS
+   
+   1. Return statement: so as the program knows when to stop
+    ALways write this first
+   2. base case : to check a particular condition
+   3. recursive call: call itself with different values
+
+   Pseudocode:
+   1. if node is null, return false
+   2. if node.val === val, return true
+   3. else call the function again with parameters as val and next node
+      in the linkedList.
    
  */
 
@@ -96,6 +106,14 @@ class SinglyLinkedList {
     }
     this.length++;
   }
+  show() {
+    if (!this.head) return null;
+    let traverse = this.head;
+    while (traverse != null) {
+      console.log(traverse.val);
+      traverse = traverse.next;
+    }
+  }
   search(val) {
     if (!this.head) {
       console.log('The linkedList is empty!');
@@ -116,7 +134,25 @@ class SinglyLinkedList {
       return null;
     }
   }
-  searchRec(val) {}
+  searchRec(val, node = this.head) {
+    // if node is null either empty list
+    // or we finished traversing the list
+    if (!node) {
+      console.log('Value NOT found!');
+      // return statement
+      return false;
+    }
+    // base case
+    if (node.val === val) {
+      console.log('Value found!!');
+      // return statement
+      return true;
+    }
+    // recursive call
+    else {
+      this.searchRec(val, node.next);
+    }
+  }
 }
 
 // playlist is an empty linkedList
@@ -132,5 +168,5 @@ playList.push('Dopamine Addict');
 playList.shift();
 playList.pop();
 playList.unshift('Let me down slowly');
-console.log(playList);
-playList.search('Dopamine Addict');
+playList.show();
+playList.searchRec('the devil');
