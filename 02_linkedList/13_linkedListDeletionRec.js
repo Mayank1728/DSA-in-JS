@@ -1,3 +1,5 @@
+// Delete a linkedList node recursively
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -115,16 +117,18 @@ class SinglyLinkedList {
       traverse = traverse.next;
     }
   }
-  revRecursively(prev = null, curr = this.head){
-    if(!curr) {
-      this.head = prev;
-      return null;
+  deleteRec(val, prev = null, node = this.head) {
+    // BREAK CONDITION
+    if (!node) return null;
+    if (node.val === val) {
+      console.log('Value found');
+      prev.next = node.next;
+      this.length--;
+      return true;
     }
-    let next = curr.next;
-    curr.next = prev;
-    prev = curr;
-    this.revRecursively(prev, next);
-
+    prev = node;
+    node = node.next;
+    this.deleteRec(val, prev, node);
   }
 }
 
@@ -135,7 +139,7 @@ playList.push('If I killed someone for you');
 playList.push('Change my clothes');
 playList.push("The devil doesn't bargain");
 playList.push('Jesus in LA');
-playList.push('Dopamine Addict');
-playList.show()
-playList.revRecursively();
-playList.show()
+playList.show();
+playList.deleteRec('Jesus in LA');
+playList.show();
+console.log(playList.length);
