@@ -1,6 +1,6 @@
-// Delete a linkedList node recursively
+// Delete a linkedList curr recursively
 
-class Node {
+class curr {
   constructor(val) {
     this.val = val;
     this.next = null;
@@ -16,17 +16,17 @@ class SinglyLinkedList {
   }
   push(val) {
     if (this.length === 0) {
-      this.head = new Node(val);
+      this.head = new curr(val);
       this.tail = this.head;
     } else {
       let traverse = this.head;
       // when traverse.next is null this means we
       // have reached the end of the linkedList
-      // now we need to push new node here
+      // now we need to push new curr here
       while (traverse.next != null) {
         traverse = traverse.next;
       }
-      traverse.next = new Node(val);
+      traverse.next = new curr(val);
       // finally change the tail
       this.tail = traverse.next;
     }
@@ -44,12 +44,12 @@ class SinglyLinkedList {
       console.log('LinkedList is NOW EMPTY!!');
     } else {
       let traverse = this.head;
-      // will break out when reaches 2nd to last node
+      // will break out when reaches 2nd to last curr
       while (traverse.next.next != null) {
         traverse = traverse.next;
       }
-      // make the 2nd last node as the last node
-      // 2nd last node becomes new tail
+      // make the 2nd last curr as the last curr
+      // 2nd last curr becomes new tail
       traverse.next = null;
       this.tail = traverse;
     }
@@ -68,7 +68,7 @@ class SinglyLinkedList {
     } else {
       // prevHead stores old head
       const prevHead = this.head;
-      // new head is equal to next node
+      // new head is equal to next curr
       this.head = this.head.next;
       // old head .next property is null
       prevHead.next = null;
@@ -77,14 +77,14 @@ class SinglyLinkedList {
   }
   unshift(val) {
     if (!this.length) {
-      this.head = new Node(val);
+      this.head = new curr(val);
       this.tail = this.head;
     } else {
-      // created new node with provided value
-      let first = new Node(val);
-      // combining new node with head
+      // created new curr with provided value
+      let first = new curr(val);
+      // combining new curr with head
       first.next = this.head;
-      // new node is the new head now
+      // new curr is the new head now
       this.head = first;
     }
     this.length++;
@@ -117,18 +117,22 @@ class SinglyLinkedList {
       traverse = traverse.next;
     }
   }
-  deleteRec(val, prev = null, node = this.head) {
+  deleteRec(val, prev = null, curr = this.head) {
     // BREAK CONDITION
-    if (!node) return null;
-    if (node.val === val) {
+    if (!curr) return null;
+
+    // Check whether this is the curr we want to delete
+    if (curr.val === val) {
       console.log('Value found');
-      prev.next = node.next;
+      prev.next = curr.next;
       this.length--;
       return true;
     }
-    prev = node;
-    node = node.next;
-    this.deleteRec(val, prev, node);
+
+    // update the prev and curr
+    prev = curr;
+    curr = curr.next;
+    this.deleteRec(val, prev, curr);
   }
 }
 
