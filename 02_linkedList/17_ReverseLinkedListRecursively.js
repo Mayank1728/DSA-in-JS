@@ -1,11 +1,5 @@
 /*
-   Reverse a linked List
-   1. if linkedList is empty, return null
-   2. else
-      2.1 while curr exists
-         2.1.1 next = curr.next , prev = null, curr = this.head
-         2.1.2 curr.next in next and curr.next = prev 
-         2.1.3 prev = curr and curr = next;
+   Reverse a linked List Recursively
 
 */
 
@@ -141,7 +135,30 @@ class SinglyLinkedList {
     this.show();
     return this.head;
   }
-  reverseRec() {}
+  reverseRec(prev = null, curr = this.head) {
+    // if current is null, you have either reached the end of the list
+    // else you passed in empty list
+
+    // BREAK CONDITION
+    if (!curr) {
+      // when curr is null , prev is the last node
+      // so changing the head to prev
+      this.head = prev;
+      this.show();
+      return null;
+    }
+
+    // REVERSE LOGIC
+    const next = curr.next;
+    curr.next = prev;
+
+    // updating current to next and prev to current
+    prev = curr;
+    curr = next;
+
+    // RECURSIVE CALL
+    this.reverseRec(prev, curr);
+  }
 }
 
 // playlist is an empty linkedList
@@ -152,5 +169,5 @@ playList.push('Change my clothes');
 playList.push("The devil doesn't bargain");
 playList.push('Jesus in LA');
 playList.push('Dopamine Addict');
-playList.reverse();
-console.log(playList.reverse());
+playList.show();
+playList.reverseRec();
