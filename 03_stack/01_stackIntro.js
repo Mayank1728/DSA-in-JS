@@ -20,4 +20,6 @@
    2. LinkedLists
 
    I will implement stack with arrays as well as linkedList.
+   Time and Space complexity: O(1)(insertion and deletion)
+   and O(1)
 */
