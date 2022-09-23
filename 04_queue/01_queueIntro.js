@@ -1,8 +1,7 @@
 /*
   What is Queue ?
   
-  What is the first thing that comes to your mind when
-  you hear the word queue ? 
+  What is the first thing that comes to your mind when you hear the word queue ? 
   Queue at the airport, bookshop, queue for movie tickets...
   In a queue, the first person to move in is the first person to move out.
   
