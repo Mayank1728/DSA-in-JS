@@ -5,9 +5,7 @@
     3. top() display current value at the top of stack
     4. show() to display all the values in the stack(top to bottom)
 
-    I am implementing the top function with the alias
-    peek() because js is getting confused whether
-    I am calling top property or top method LOL!
+    I am implementing the top function with the alias peek() because js is getting confused whether I am calling top property or top method LOL!
 
     push operation: O(1) time
     pop operation: O(1) time
@@ -16,21 +14,31 @@ class Stack {
   constructor() {
     this.data = [];
     this.length = 0;
+
+    /*
+      YOU SHOULD NOT WRITE : this.length = this.data.length 
+      because you are inside a constructor function
+      which is called ONLY ONCE when you create/initialize an object.
+      this.length = this.data.length statement will 
+      FIX this.length = 0 as at the time of creating the object this.data
+      was an empty array.
+    */
+
     this.top = -1;
   }
   push(val) {
-    this.data[++this.top] = val;
+    this.data[++this.top] = val; //using pre increment
     this.length++;
     return this.data;
   }
   pop() {
     if (this.top === -1) {
       console.log('Stack Underflow');
-      return 'Stack Underflow';
+      return false;
     } else {
       this.length--;
       this.top--;
-      return this.data.pop();
+      return this.data.pop(); // returning the poped or deleted element
     }
   }
   peek() {
