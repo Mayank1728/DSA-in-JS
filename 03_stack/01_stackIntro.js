@@ -14,12 +14,17 @@
    is in between the clothes stack ?
    Thats the NEAT part you can't.
    You can only insert at the top and remove from the top.
+
+   Real Life Examples of Stack
+   1. Clothes inside a suitcase, clothes you packed last will come out first.
+   2. When adding Songs to a playlist, the songs added last are played first.
    
    Stacks can be implemented with 
    1. Arrays
    2. LinkedLists
 
    I will implement stack with arrays as well as linkedList.
-   Time and Space complexity: O(1)(insertion and deletion)
-   and O(1)
+   
+   Time complexity: Insertion O(1) and Deletion O(1)
+   Space complexity: O(n)
 */

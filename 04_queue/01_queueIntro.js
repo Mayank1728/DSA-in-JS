@@ -8,11 +8,17 @@
   Similarly Queue data structure works on the principle
   of FIFO(First In First Out).
 
+  Real life examples of Queue
+  1. while listening to Songs, you click "add songs to the queue". The songs
+      added first to the queue are played first.
+  2. Queue at the theatre, person who came in first came out first.
+  
+
   In stacks we push & pop elements from the same end.
   However, in a queue we push elements to rear and pop elements from
   the top/front. 
 
   Time Complexity: Insertion O(1) and Deletion O(1)
-  Space Complexity: O(n) as you can access elements from the top ONLY.
+  Space Complexity: O(n) 
 
 */
