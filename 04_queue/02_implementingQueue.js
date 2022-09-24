@@ -22,6 +22,14 @@ class Queue {
     this.rear = null;
     this.data = [];
     this.length = 0;
+    /*
+      YOU SHOULD NOT WRITE : this.length = this.data.length 
+      because you are inside a constructor function
+      which is called ONLY ONCE when you create/initialize an object.
+      this.length = this.data.length statement will 
+      FIX this.length = 0 as at the time of creating the object this.data
+      was an empty array.
+    */
   }
   // adding value at the end of the array
   enqueue(val) {
