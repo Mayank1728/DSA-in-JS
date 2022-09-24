@@ -12,6 +12,7 @@
   However, in a queue we push elements to rear and pop elements from
   the top/front. 
 
-  Time Complexity: O(1)
+  Time Complexity: Insertion O(1) and Deletion O(1)
+  Space Complexity: O(n) as you can access elements from the top ONLY.
 
 */

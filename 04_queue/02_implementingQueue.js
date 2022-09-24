@@ -1,5 +1,7 @@
 /*
    Queue Class implementation
+   Technically we should not implement queue using array
+   To avoid confusion I used enqueue and dequeue
    1. push function:
      1.1 if the queue is empty, Update the top and rear
      1.2 update rear = val
