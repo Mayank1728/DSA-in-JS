@@ -30,8 +30,8 @@ class Queue {
       this.top = val;
     }
 
-    //.enqueue the value, update the rear, update the len
-    this.data.enqueue(val);
+    //push the value, update the rear, update the len
+    this.data.push(val);
     this.rear = val;
     this.length++;
     return true;
@@ -49,12 +49,12 @@ class Queue {
     if (this.length === 1) {
       this.top = null;
       this.rear = null;
-      this.data.dequeue();
+      this.data.shift();
       return true;
     }
 
-    // dequeue the data and reduce the length and update rear
-    this.data.dequeue();
+    // dequeue the data using shift and reduce the length and update rear
+    this.data.shift();
     this.length--;
     this.rear = this.data[this.length - 1];
   }
