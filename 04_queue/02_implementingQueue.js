@@ -18,8 +18,8 @@
 
 class Queue {
   constructor() {
-    this.top = null;
-    this.rear = null;
+    this.top = -1;
+    this.rear = -1;
     this.data = [];
     this.length = 0;
     /*
@@ -31,56 +31,50 @@ class Queue {
       was an empty array.
     */
   }
+
   // adding value at the end of the array
   enqueue(val) {
-    // if the queue was EMPTY, update the top = val
+    // if the queue was EMPTY, update top = 0 and rear = 0
     if (!this.length) {
-      this.top = val;
+      this.top = 0;
+      this.rear = 0;
     }
 
-    //push the value, update the rear, update the len
-    this.data.push(val);
-    this.rear = val;
+    //push the value, postincrement rear, update length
+    this.data[this.rear++] = val;
     this.length++;
     return true;
   }
+
   // removing value from the start of the array
   dequeue() {
     // if top is empty, return false
-    if (!this.top) {
+    if (this.top === this.rear) {
       console.log('Empty QUEUE!');
       return false;
     }
 
-    // if len === 1, then the queue will be empty after dequeue()
-    // so top = null , rear = null and data.dequeue()
-    if (this.length === 1) {
-      this.top = null;
-      this.rear = null;
-      this.data.shift();
-      return true;
-    }
-
-    // dequeue the data using shift and reduce the length and update rear
-    this.data.shift();
+    this.top++;
     this.length--;
-    this.rear = this.data[this.length - 1];
+    this.show();
   }
+
   show() {
-    for (let i = 0; i < this.data.length; i++) {
-      console.log(this.data[i]);
-    }
+    // slice the array starting from top to rear
+    // including top but not including rear
+    // note that this.data array still contains all the enqueued elements
+    console.log(this.data.slice(this.top, this.rear));
   }
 }
 let movie = new Queue();
 movie.enqueue(1);
 movie.enqueue(2);
 movie.enqueue(3);
-movie.enqueue(1);
-movie.dequeue();
-movie.enqueue(2);
-movie.enqueue(3);
+movie.enqueue(4);
 movie.dequeue();
 movie.enqueue(5);
+movie.enqueue(6);
+movie.dequeue();
+movie.enqueue(7);
 movie.show();
 console.log(movie.top, movie.length);
