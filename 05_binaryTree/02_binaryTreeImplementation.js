@@ -6,8 +6,8 @@ class Node {
   }
 }
 class binaryTree {
-  constructor(val = null) {
-    this.root = val;
+  constructor() {
+    this.root = null;
   }
 }
 let directory = new binaryTree();
