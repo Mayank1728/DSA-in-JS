@@ -2,8 +2,7 @@
    What is stack ?
    Stack is a Data Structure which uses LIFO(Last In First Out)
    principle.
-   You can insert and delete element from the same end.
-   This is know as TOP.
+   You insert and delete element from THE SAME END AKA TOP.
 
 
    Let's consider a stack of clothes. The cloth you stakced on
@@ -18,6 +17,7 @@
    Real Life Examples of Stack
    1. Clothes inside a suitcase, clothes you packed last will come out first.
    2. When adding Songs to a playlist, the songs added last are played first.
+   3. opening a bread packet
    
    Stacks can be implemented with 
    1. Arrays

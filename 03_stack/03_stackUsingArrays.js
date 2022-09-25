@@ -28,11 +28,12 @@ class Stack {
     // initialized top = -1 to differentiate between empty stack
     // and stack with some elements
   }
+
   push(val) {
     this.data[++this.top] = val; //using pre increment
     this.length++;
-    return this.data;
   }
+
   pop() {
     if (this.top === -1) {
       console.log('Stack Underflow');
@@ -40,28 +41,28 @@ class Stack {
     } else {
       this.length--;
       this.top--;
-      return this.data.pop(); // returning the poped or deleted element
+      return this.data.pop();
+      // deletes the last element from array & returns the removed element
     }
   }
+
   peek() {
-    if (this.top !== -1) {
-      console.log(this.data[this.top]);
-      return this.data[this.top];
+    if (this.top === -1) {
+      console.log('stack is empty');
+      return false;
     }
-    console.log('stack is empty');
-    return false;
+    console.log(this.data[this.top]);
+    return this.data[this.top];
   }
+
   show() {
     for (let i = 0; i <= this.top; i++) {
       console.log(this.data[i]);
     }
   }
+
   isEmpty() {
-    if (this.top <= -1) {
-      console.log('The stack is empty');
-      return true;
-    }
-    return false;
+    return this.top === -1;
   }
 }
 let color = new Stack();
