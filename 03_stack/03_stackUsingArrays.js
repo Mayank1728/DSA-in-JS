@@ -25,6 +25,8 @@ class Stack {
     */
 
     this.top = -1;
+    // initialized top = -1 to differentiate between empty stack
+    // and stack with some elements
   }
   push(val) {
     this.data[++this.top] = val; //using pre increment
