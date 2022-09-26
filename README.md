@@ -1,6 +1,6 @@
 # DSA-in-JS
 
-This is Data Structures and Algorithms implemented in javaScritpt. <br>
+This is Data Structures and Algorithms implemented in javaScript. <br>
 LeetCode: https://leetcode.com/Sapien17/ <br>
 
 RESOURCES <br>
