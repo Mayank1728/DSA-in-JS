@@ -5,14 +5,8 @@
    So queue should be implemented using LinkedList.
 
    To avoid confusion I used enqueue and dequeue
-   1. enqueue function:
-     1.1 if the queue is empty, Update the top and rear
-     1.2 update rear = val
-     1.3.enqueue the value in this.data
-   2. dequeue function
-     2.1 if the queue is empty, return false
-     2.2 if len of queue is 1, top = null and rear = null
-     2.3 else update top
+   1. enqueue function
+    
    
 */
 
