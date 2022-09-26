@@ -3,9 +3,17 @@
       1. enqueue function
          if head is empty, then head and tail point to same node
          else add node to tail and update tail
+         length++
       2. dequeue function
          if head is empty then return false
-         else if  
+         else if  head === tail this means list contains JUST 1 node
+           then head and tail becomes null
+         else
+          oldHead = head
+          head = head.next
+          oldHead.next = null
+         length--
+
 */
 
 class Node {
@@ -22,6 +30,7 @@ class Queue {
   }
   enqueue(val) {
     let node = new Node(val);
+    // if you are adding 1st element
     if (!this.head) {
       this.head = node;
       this.tail = node;
@@ -44,6 +53,7 @@ class Queue {
       this.head = null;
       this.tail = null;
     } else {
+      // remove the head node and update head
       let removeNode = this.head;
       this.head = this.head.next;
       removeNode.next = null;
