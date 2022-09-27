@@ -1,5 +1,5 @@
 /*
-           Binary Trees
+           Trees
    
     1. Difference between linear and non linear data structure
 
@@ -22,14 +22,36 @@
 
 
     Real World Examples:
-    1. files directory
-    2. html dom
-    3. AI (ex- minimax tree): playing against itself what happens next
-    4. JSON: javascript object notation
+        Trees are used to organize HIREARCHICAL data, organize data
+
+            1. files directory
+            2. html dom
+            3. AI (ex- minimax tree): playing against itself what happens next
+            4. JSON: javascript object notation
+            5. Trie: used to store dicitionary.
+
+
+    depth of x node: the length of path from root node to x node
+                     OR no of edges from root to x
+    
+    height of x node: the LONGEST PATH from x node to the
+                     leaf node.
+
+    Height of a tree is Height of the node.
+
 
     Types of trees
     1. binary tree
     2. binary Search tree
     3. AVL etc
+
+                Binary Tree
+    
+    Binary Tree means the parent node can have ATMOST 2 childern.
+    A Node contains 
+        1. val
+        2. left child
+        3. right child
+
 
 */
