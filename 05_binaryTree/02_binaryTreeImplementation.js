@@ -79,12 +79,11 @@ class binaryTree {
   }
 }
 let directory = new binaryTree();
-directory.insert(5);
-directory.insert(2);
-directory.insert(6);
+directory.insert(3);
 directory.insert(4);
+directory.insert(6);
+directory.insert(5);
 directory.insert(1);
-directory.insert(9);
 console.log(directory);
 
 /*
