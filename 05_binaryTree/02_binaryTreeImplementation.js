@@ -19,7 +19,15 @@
                           by traversal = traversal.right
       
 
-      To Do: Implement this insert function recursively
+      To Do:  1. Implement this insert function recursively
+              2. Pre-Order Traversal : 
+                      <root> <left> <right>
+              3. In-Order Traversal : 
+                      <left> <root> <right>
+              4. Post-Order Traversal : 
+                      <left> <right> <root>
+              5. add quote on every topic
+              6. why did the linked list etc were created etc and tradeoffs.
 
       Note: This insert function is just to add values to a binary tree
       It doesn't add values to the tree in such a order that all the values
