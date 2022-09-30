@@ -5,12 +5,12 @@
   1. Check whether the left node exists
         if it does exist then it starts traversing the left node & 
         this left node becomes the new root node 
-        else it STOPS OR comes back after traversing the left node
+        ELSE IT STOPS OR comes back after traversing the left node
 
   2. Now check whether the right node exists
         if it does exist then it starts traversing the right node & 
         this right node becomes the new root node 
-        else it STOPS OR comes back after traversing the right node
+        ELSE IT STOPS OR comes back after traversing the right node
 
   3. Then print the root node value
 
@@ -138,7 +138,7 @@ directory.postOrder();
     
     inOrder = [1,2,3,4,5,6]
 
-    postOrder = []
+    postOrder = [2,1,5,6,4,3]
     
     3, 4, 6, 5, 1, 
           
