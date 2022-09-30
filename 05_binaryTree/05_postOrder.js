@@ -30,6 +30,19 @@ class binaryTree {
   constructor() {
     this.root = null;
   }
+  postOrder(node = this.root) {
+    if (!node) return;
+
+    if (node.left) {
+      this.postOrder(node.left);
+    }
+
+    if (node.right) {
+      this.postOrder(node.right);
+    }
+
+    console.log(node.val);
+  }
   preOrder(node = this.root) {
     // Break statement : when to stop ?
     // if node is null STOP
@@ -115,7 +128,7 @@ directory.insert(5);
 directory.insert(1);
 directory.insert(2);
 console.log(directory);
-directory.inOrder();
+directory.postOrder();
 
 /*
   Here N means null
@@ -124,6 +137,8 @@ directory.inOrder();
     preOrder = [3,1,2,4,6,5]
     
     inOrder = [1,2,3,4,5,6]
+
+    postOrder = []
     
     3, 4, 6, 5, 1, 
           
