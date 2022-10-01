@@ -2,7 +2,8 @@
   Post-Order Traversal : 
     <left> <right> <root>
 
-  Trick to remember: postOrder means ROOT node is AFTEr left & right
+
+  Trick to remember: postOrder means ROOT node is AFTER left & right
 
   1. Check whether the left node exists
         if it does exist then it starts traversing the left node & 
