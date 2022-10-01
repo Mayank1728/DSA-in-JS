@@ -85,6 +85,12 @@ class binaryTree {
     }
   }
   bfs() {
+    // to tackle the edge case q = [null]
+    if (!this.root) {
+      console.log('ROOT NODE IS EMPTY');
+      return;
+    }
+
     // queue contains the root node
     let queue = [this.root];
 
