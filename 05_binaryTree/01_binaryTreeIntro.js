@@ -37,7 +37,7 @@
     height of x node: the LONGEST PATH from x node to the
                      leaf node.
 
-    Height of a tree is Height of the node.
+    Height of a tree is longest path from ROOT node to LEAF node.
 
 
     Types of trees
