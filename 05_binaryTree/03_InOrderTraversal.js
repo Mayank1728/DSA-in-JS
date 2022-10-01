@@ -2,6 +2,9 @@
   In-Order Traversal : 
     <left> <root> <right>
 
+    
+  Trick to remember: in order means ROOT node is b/w left & right
+
   1. Check whether the left node exists
         if it does exist then it starts traversing the left node & 
         this left node becomes the new root node 

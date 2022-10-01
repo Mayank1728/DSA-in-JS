@@ -2,6 +2,8 @@
   Post-Order Traversal : 
     <left> <right> <root>
 
+  Trick to remember: postOrder means ROOT node is AFTEr left & right
+
   1. Check whether the left node exists
         if it does exist then it starts traversing the left node & 
         this left node becomes the new root node 

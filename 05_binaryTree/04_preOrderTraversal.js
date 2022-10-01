@@ -3,6 +3,7 @@
     <root> <left> <right>
   
   
+  Trick to remember: preOrder means ROOT is first then left & right
   1. Print the root node value
 
   2. Then check whether the left node exists
