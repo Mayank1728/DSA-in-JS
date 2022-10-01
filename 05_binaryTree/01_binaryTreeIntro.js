@@ -9,9 +9,12 @@
         Trees are non-linear data structure which means data is stored NON-SEQUENTIALLY.
         Trees contains levels.
     
-    2. A tree contains ONLY 1 ROOT NODE. A node can reference(point towards : ->)
-        ONLY to children nodes. Furthermore, a node CANNOT reference(point towards : ->)
-        back to parent node or to its sibling node. 
+    2. A Tree is considered a Binary Tree IF it satisfies all 3 conditions:
+        2.1 It contains EXACTLY 1 ROOT NODE 
+            ROOT node: The node which has no parent.
+        2.2 every PARENT node has AT MOST 2 CHILDREN(it can be 0, 1, or 2 children)
+        2.3 EXACTLY 1 PATH from ROOT node to any other node
+            In other words, there should be NO CYCLE in the Tree.
 
     
     Terminology:
