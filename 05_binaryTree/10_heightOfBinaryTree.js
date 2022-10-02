@@ -21,12 +21,13 @@ class binaryTree {
   }
   height(node = this.root) {
     /*
-       Height of a Binary Tree with just 1 node is 0. As the root node is 
-       the leaf node.
-       
-       Lets consider the BASE CASE when the binary Tree contains just 1 node:
-        1. node.left is null also node.right is null.
-        2. when height is called, 
+       Lets consider a CASE when the binary Tree contains just 1 node:
+        
+         Height of a Binary Tree with just 1 node is 0. As the root node is 
+         the leaf node.
+        
+        1. node.left is null, also, node.right is null.
+        2. when height method is called, 
           2.1 leftHaft = -1 as node.left is null and recursive call returns -1
           2.2 rightHalf = -1 as node.right is null and recursive call returns -1
           2.3 return Max(leftHalf,rightHalf) + 1. This means
@@ -39,8 +40,10 @@ class binaryTree {
        
     */
 
+    // BASE CASE
     if (!node) return -1;
 
+    // RECURSIVE CALLS
     let leftHalf = this.height(node.left);
     let rightHalf = this.height(node.right);
 
