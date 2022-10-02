@@ -1,38 +1,51 @@
 /*
-    Implementing the insert function
-
-      The insert function will add values in the binary tree
+    Implementing the insert function :The insert function will add values 
+    in the binary tree
+        
+        Algorithm
         1. if tree is empty, make val as root node
-        2. else then let traversal = root
-            Inside the WHILE loop
-              2.1 if traversal.val > val
-                2.1.1 if traversal.left is NULL
-                          then insert the node at traversal.left
-                          then BREAK;
-                  2.1.2 else keep traversing the left side
-                          by traversal = traversal.left
-              2.2 else
-                  2.2.1 if traversal.right is NULL
-                            then insert the val at traversal.right
+        
+        2. else, let traversal = root
+            Inside the WHILE loop(never terminating condition)
+                
+                2.1 if traversal.val > val
+                  2.1.1 if traversal.left is NULL
+                            then insert the node at traversal.left
                             then BREAK;
-                  2.2.2 else keep traversing the right side
-                          by traversal = traversal.right
+                    2.1.2 else keep traversing the left side
+                            by traversal = traversal.left
+                
+                            
+                2.2 ELSE
+                    2.2.1 if traversal.right is NULL
+                              then insert the val at traversal.right
+                              then BREAK;
+                    2.2.2 else keep traversing the right side
+                            by traversal = traversal.right
       
 
-      To Do:  1. Implement this insert function recursively
-              2. Pre-Order Traversal : 
-                      <root> <left> <right>
-              3. In-Order Traversal : 
-                      <left> <root> <right>
-              4. Post-Order Traversal : 
-                      <left> <right> <root>
-              5. add quote on every topic
-              6. why did the linked list etc were created etc and tradeoffs.
 
-      Note: This insert function is just to add values to a binary tree
-      It doesn't add values to the tree in such a order that all the values
-      to the left of the parent node are smaller and all the values to the
-      right of the parent node are greater.
+
+Tree Traversal Techniques  
+        => Pre-Order Traversal : 
+                <root> <left> <right>
+        => In-Order Traversal : 
+                <left> <root> <right>
+        => Post-Order Traversal : 
+                <left> <right> <root>
+
+                
+Visualization: https://algorithm-visualizer.org/brute-force/binary-tree-traversal
+
+To-DO:
+  => add quote on every topic
+  => why linked list etc were created etc and tradeoffs.
+
+
+Important Note: This insert function is just to add values to a binary tree
+It doesn't add values to the tree in such a order that all the values
+to the left of the parent node are smaller and all the values to the
+right of the parent node are greater.
 
 */
 class Node {

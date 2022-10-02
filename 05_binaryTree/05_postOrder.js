@@ -3,6 +3,8 @@
     <left> <right> <root>
 
 
+  Visualization: https://algorithm-visualizer.org/brute-force/binary-tree-traversal
+
   Trick to remember: postOrder means ROOT node is AFTER left & right
 
   1. Check whether the left node exists
@@ -16,9 +18,6 @@
         ELSE IT STOPS OR comes back after traversing the right node
 
   3. Then print the root node value
-
-  
-  Explain more on: Leap of faith and recursion and working of algorithm
   
 */
 

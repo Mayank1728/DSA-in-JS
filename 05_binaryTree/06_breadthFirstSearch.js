@@ -1,5 +1,5 @@
 /*
-  Breadth First Search
+  Breadth First Search AKA Level Order
 
   In breadth first search you traverse all the neighbouring nodes first then move to the next level.
 

@@ -3,7 +3,10 @@
     <root> <left> <right>
   
   
+  Visualization: https://algorithm-visualizer.org/brute-force/binary-tree-traversal
+
   Trick to remember: preOrder means ROOT is first then left & right
+  
   1. Print the root node value
 
   2. Then check whether the left node exists
@@ -15,10 +18,6 @@
         if it does exist then it starts traversing the right node & 
         this right node becomes the new root node 
         else it STOPS OR comes back after traversing the right node
-
-  
-  Explain more on: Leap of faith and recursion and working of algorithm
-  
   
 */
 class Node {
@@ -33,15 +32,14 @@ class binaryTree {
     this.root = null;
   }
   preOrder(node = this.root) {
-    // Break statement : when to stop ?
-    // if node is null STOP
+    // BASE CASE : when to stop ?
+    // if node is null then STOP
     if (!node) return;
 
-    // push the node value inside the array
-    // Base case
+    // print the node value
     console.log(node.val);
 
-    // if left node exists ()
+    // if left node exists
     if (node.left) {
       // then the left node is traversed
       // Recursive call

@@ -3,23 +3,28 @@
     <left> <root> <right>
 
     
+  Visualization: https://algorithm-visualizer.org/brute-force/binary-tree-traversal
+
   Trick to remember: in order means ROOT node is b/w left & right
 
   1. Check whether the left node exists
+
         if it does exist then it starts traversing the left node & 
-        this left node becomes the new root node 
+        this left node becomes the new root node & everything
+        starts again from step 1 again with different root node
+        
         else it STOPS OR comes back after traversing the left node
 
 
   2. Then print the root node value
 
   3. Now check whether the right node exists
+        
         if it does exist then it starts traversing the right node & 
-        this right node becomes the new root node 
+        this right node becomes the new root node and everything
+        starts again from step 1 again with different root node
+        
         else it STOPS OR comes back after traversing the right node
-
-  
-  Explain more on: Leap of faith and recursion and working of algorithm
   
 */
 
@@ -59,14 +64,21 @@ class binaryTree {
     }
   }
   inOrder(node = this.root) {
+    // if node is null return
     if (!node) return;
 
+    // if left of node exists, RECURSIVELY call the function
+    // with node.left as new root
     if (node.left) {
       this.inOrder(node.left);
     }
 
+    // after traversing the left side
+    // print the node value
     console.log(node.val);
 
+    // if right exits , RECURSIVELY call the function
+    // with node.right as new root
     if (node.right) {
       this.inOrder(node.right);
     }
@@ -124,8 +136,6 @@ directory.inOrder();
 /*
   Here N means null
     Our tree looks like this:
-    
-    preOrder = [3,1,2,4,6,5]
     
     inOrder = [1,2,3,4,5,6]
     
