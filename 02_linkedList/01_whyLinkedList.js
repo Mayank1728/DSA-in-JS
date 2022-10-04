@@ -24,7 +24,7 @@
 
     Therefore, we use linkedlist because it offers
           O(1) Insertion
-          O(1) Deletion (when you remember the tail node)
+          O(1) Deletion (ONLY when you remember the tail node)
 
     TRADEOFFS:
       1. Arrays have very fast lookup time and random access of elements(you can
