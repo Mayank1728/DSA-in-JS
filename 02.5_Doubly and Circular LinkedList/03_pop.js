@@ -63,7 +63,7 @@ class DoublyLinkedList {
   pop() {
     if (!this.head) {
       console.log('CANNOT REMOVE NODE, LinkedList is EMPTY!');
-      return 1;
+      return undefined;
     } else if (this.head === this.tail || this.lenght === 1) {
       this.head = null;
       this.tail = null;

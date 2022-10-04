@@ -62,7 +62,7 @@ class DoublyLinkedList {
   pop() {
     if (!this.head) {
       console.log('CANNOT REMOVE NODE, LinkedList is EMPTY!');
-      return 1;
+      return undefined;
     } else if (this.head === this.tail || this.lenght === 1) {
       this.head = null;
       this.tail = null;
@@ -78,7 +78,7 @@ class DoublyLinkedList {
   shift() {
     if (!this.head) {
       console.log('CANNOT REMOVE NODE, LinkedList is EMPTY!');
-      return 1;
+      return undefined;
     } else if (this.head === this.tail || this.lenght === 1) {
       this.head = null;
       this.tail = null;
@@ -97,9 +97,8 @@ class DoublyLinkedList {
       this.head = freshNode;
       this.tail = freshNode;
     } else {
-      let oldNode = this.head;
-      oldNode.prev = freshNode;
-      freshNode.next = oldNode;
+      this.head.prev = freshNode;
+      freshNode.next = this.head;
       this.head = freshNode;
     }
     this.lenght++;

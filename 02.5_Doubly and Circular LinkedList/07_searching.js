@@ -1,4 +1,5 @@
-// shift : remove the first node from the start of  linkedList
+// showAll: this shows the all the node val from head
+// showFromEnd: this shows all the node val from tail
 
 // class always starts with a capital letter
 class Node {
@@ -17,12 +18,12 @@ class DoublyLinkedList {
   }
   push(val) {
     // created node
-    let addNode = new Node(val);
+    let freshNode = new Node(val);
 
     // if DoublyLinkedList is empty then
     if (!this.head) {
-      this.head = addNode;
-      this.tail = addNode;
+      this.head = freshNode;
+      this.tail = freshNode;
     }
 
     // else (if it contains 1 or more nodes)
@@ -36,9 +37,9 @@ class DoublyLinkedList {
 
       // 1. Directly insert node at this.tail
 
-      this.tail.next = addNode;
-      addNode.prev = this.tail;
-      this.tail = addNode;
+      this.tail.next = freshNode;
+      freshNode.prev = this.tail;
+      this.tail = freshNode;
 
       // 2. start traversing from head when you reach the end add the new node
 
@@ -52,9 +53,9 @@ class DoublyLinkedList {
          traverse = traverse.next;
        }
 
-       traverse.next = addNode;
-       addNode.prev = traverse;
-       this.tail = addNode;
+       traverse.next = freshNode;
+       freshNode.prev = traverse;
+       this.tail = freshNode;
       */
     }
     this.lenght++;
@@ -73,7 +74,6 @@ class DoublyLinkedList {
       this.tail = secondLastNode;
     }
     this.lenght--;
-    console.log(this);
   }
   shift() {
     if (!this.head) {
@@ -89,15 +89,73 @@ class DoublyLinkedList {
       this.head.prev = null;
     }
     this.lenght--;
-    console.log(this);
+  }
+  unshift(val) {
+    let freshNode = new Node(val);
+    if (!this.head) {
+      this.head = freshNode;
+      this.tail = freshNode;
+    } else {
+      this.head.prev = freshNode;
+      freshNode.next = this.head;
+      this.head = freshNode;
+    }
+    this.lenght++;
+  }
+  showAll() {
+    /*
+     1. start traversing from head to tail
+   */
+    if (!this.head) {
+      console.log('The LinkedList is EMPTY!!');
+      return undefined;
+    }
+    let traverse = this.head;
+    while (traverse) {
+      console.log(traverse.val);
+      traverse = traverse.next;
+    }
+  }
+  showFromEnd() {
+    // start traversing from tail to head
+    if (!this.head) {
+      console.log('The LinkedList is EMPTY!!');
+      return undefined;
+    }
+    let traverse = this.tail;
+    while (traverse) {
+      console.log(traverse.val);
+      traverse = traverse.prev;
+    }
+  }
+  search(val) {
+    // Here I am starting from the tail, traversing the list backwards
+    // searching for the value
+    if (!this.head) {
+      console.log('The LinkedList is EMPTY!!');
+      return false;
+    }
+    let traverse = this.tail;
+    while (traverse) {
+      if (traverse.val === val) {
+        console.log('Value found');
+        return true;
+      }
+      traverse = traverse.prev;
+    }
+    console.log('Value NOT found');
+    return false;
   }
 }
 
 // playlist is an empty linkedList
 let playList = new DoublyLinkedList();
-playList.push('Eyes Blue Like the Atlantic');
-playList.push('Welcome to Brixton');
-playList.push('Drop Top');
-playList.push('If I killed someone for you');
+playList.push(1);
+playList.push(4);
+playList.push(7);
+playList.push(5);
 playList.pop();
 playList.shift();
+playList.unshift(9);
+playList.showAll();
+playList.search(2);
