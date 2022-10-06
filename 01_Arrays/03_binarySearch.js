@@ -1,17 +1,24 @@
 // Binary Search
-// pre-requisite: Binary Search can work ONLY on SORTED ARRAY
+
+// pre-requisite: Binary Search WORKS ONLY ON SORTED ARRAYS.
+
 /*
-                 *** Binary Search Intuition ***
+                            *** Binary Search Intuition ***
    let's say brian and bond are playing a guessing game. brian thinks of a number between [1 - 100] inclusive. Now bond has to guess that number. On each guess, Brian provides feedback on whether the number is greater than the actual number or less than the actual number.
    
    Conversation goes like this ->
-   the number is 20
+   
+   brian thinks the number 20
+
    bond: 1
    brian: too low!
    bond: 2
    brian: too low!
    bond: 3
    brian: too low!
+   .
+   .
+   .
    ...
    after 19 guesses 
    bond: 20
@@ -22,10 +29,12 @@
    It would become so booring that you can't even imagine.
 
    But what if he uses this approach
-   orginal number: 79
-   bond: 50
+   
+   brian thinks of the number: 79
+
+   bond: 50 (as 50 is the mid of 1 - 100)
    brian: too low!
-   bond: 75 
+   bond: 75 (as the number must be between 50 - 100 and its mid is 75)
    brian: too low!
    bond: 87
    brian: too high!
@@ -76,19 +85,18 @@ binarySearch([4, 32, 46, 78, 91], -78);
 binarySearch([4, 32, 46, 78, 91], 91);
 
 // Time complexity -> O(logN) base 2
+// Space complexity -> O(1) constant
 /*
   Why is the time complexity logN you ask ??
   lets say size of the array is N.
-  on pass number and range decreases to 
-  1. N/2 = N/2^1
-  2. N/4 = N/2^2
-  3. N/8 = N/2^3
+  on each pass the range decreases to 
+  1. N/2 = N/(2^1)
+  2. N/4 = N/(2^2)
+  3. N/8 = N/(2^3)
   ...
   on some Kth pass you will reach the key
   k. 1 =  N/2^k
  This implies N = 2^k
  taking log base 2 on both sides
  log N = k  (as log 2 with base 2 = 1)
- Therefore no of passes required logN
 */
-// Space complexity -> O(1) constant

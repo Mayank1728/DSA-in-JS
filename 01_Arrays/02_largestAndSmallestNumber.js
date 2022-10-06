@@ -1,10 +1,17 @@
+/*
+  Find the largest and smallest number in an array.
+*/
+
 // Method 1: Intutive approach
 function largestAndSmallest(arr) {
   // if array isn't empty
   if (arr.length > 0) {
     let smallest = Infinity;
+    // At first, whichever number you compare smallest against it will be greater
     let largest = -Infinity;
-    // Infinity and -Infinity are not values they are used for comparisons only. Whatever value you compare Infinity against it will always be greater and -Infinity will always be smaller than that value
+    // At first, whichever number you compare greatest against it will be smaller
+
+    // Infinity and -Infinity are NOT VALUES they are used for comparisons only.
     for (let i = 0; i < arr.length; i++) {
       if (arr[i] > largest) {
         largest = arr[i];
@@ -17,9 +24,11 @@ function largestAndSmallest(arr) {
     console.log(`The largest number is ${largest}`);
   }
 }
-let a = [1, 5, 3, 4, 2];
+let a = [1, 5, 3, 5, 10, 4, 2];
 largestAndSmallest(a);
-// Time complexity -> O(n) and Space complexity -> O(1);
+
+// Time complexity -> O(n)
+// Space complexity -> O(1)
 
 // Method 2: using Inbuit Math.max() and Math.min()
 console.log(Math.max(...a), Math.min(...a));
