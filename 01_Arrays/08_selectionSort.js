@@ -1,12 +1,17 @@
-function selectionSort(arr) {
-  /*
+// Selection Sort
+
+/*
     Pseudocode:
     1. outer for-loop to move the current element on each itration
-    2. inner for-loop to scan the array starting the from current element to the end of the array for minIndex
+    2. inner for-loop to scan the array, starting the from current element
+       to the end of the array for minIndex
     3. now swap current element with minIndex;
-  */
-  // length of the array is n then it will go from 0 to n - 2 cuz last element
-  // is already sorted
+*/
+
+function selectionSort(arr) {
+  // length of the array is n then it will go to i < arr.lenght - 1
+  // because last element is already sorted
+
   for (let i = 0; i < arr.length - 1; i++) {
     let currIndex = i;
     let minIndex = currIndex;
