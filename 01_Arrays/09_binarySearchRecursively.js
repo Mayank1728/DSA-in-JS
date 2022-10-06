@@ -27,4 +27,4 @@ function binarySearch(value, arr, start = 0, end = arr.length - 1) {
     binarySearch(value, arr, mid + 1, end);
   }
 }
-binarySearch(55, [2, 5, 9, 10, 34]);
+binarySearch(10, [2, 5, 9, 10, 34]);
