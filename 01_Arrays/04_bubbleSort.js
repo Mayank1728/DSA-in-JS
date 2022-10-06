@@ -7,12 +7,7 @@
             Else it needs to be sorted
         
         2. Passes Variable
-            On Each passes the largest value will bubble at the end
-            Ex - Array : [40, 30, 20, 10]
-                Pass 1 : [30, 20, 10, 40] 40 is at correct position
-                Pass 2 : [20, 10, 30, 40] now 30, 40 are at correct position
-                Pass 3 : [10, 20, 30, 40] now 20, 30, 40 at correct position
-                ONLY 1 element is left so No need to check 10
+            After each pass the largest value will bubble at the end
 
         MOST IMPORTANT PART this optimizes our code
 
@@ -65,4 +60,35 @@ bubbleSort([5, 10, 134, 2, 3, 8, 16, 4, 2]);
 // Time complexity: O(n^2)
 /*
     Why O(n^2) ?
+
+    lets consider the worst case that the array is sorted in dec order
+    Ex - Array : [40, 30, 20, 10]
+        No of comparisons did = 3
+            1. 40 checked with 30
+            2. 40 checked with 20
+            3. 40 checked with 10
+
+        Pass 1 : [30, 20, 10, 40] 40 is at correct position
+          No of comparisons = 2
+            1. 30 checked with 20
+            2. 30 checked with 10
+          30 was NOT CHECKED with 40 as it is already sorted
+
+        Pass 2 : [20, 10, 30, 40] now 30, 40 are at correct position
+          No of comparisons = 1
+            1. 20 checked with 10
+          20 was NOT CHECKED with 30, 40 as they are already sorted
+
+        Pass 3 : [10, 20, 30, 40] now 20, 30, 40 at correct position
+
+        ONLY 1 element is left so No need to check 10
+
+    Therefore, array of length  4
+          Comparisons/timeTaken = 3 + 2 + 1 = 6
+    Similarly in WORST CASE of N elements
+          Comparisons/timeTaken 
+          = (N - 1) + (N - 2) + (N - 3) + .. + 1
+          = N(N - 1)/2
+  
+    So, Time complexity = O(n^2)
 */
