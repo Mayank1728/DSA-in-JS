@@ -11,3 +11,5 @@ RESOURCES <br>
 5. Data Structures and Algorithms with JavaScript : https://www.oreilly.com/library/view/data-structures-and/9781449373931/ <br>
 6. myCodeSchool: https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P <br>
 7. Sorting Algorithm visualizations: https://www.toptal.com/developers/sorting-algorithms <br>
+8. AlgoExpert: https://www.algoexpert.io/product <br>
+9. Kunal Kushwaha: https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ <br>
