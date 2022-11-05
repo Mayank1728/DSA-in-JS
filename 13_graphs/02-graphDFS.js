@@ -8,7 +8,6 @@
     3. 1 means that path is blocked
 */
 
-// Todo : Problems with the function fix
 const grid = [
   [0, 0, 0, 0],
   [1, 1, 0, 0],
@@ -20,46 +19,65 @@ function dfs(
   grid,
   currRow = 0,
   currCol = 0,
-  visited = [...Array(grid.length)].map((e) => Array(grid[0].length).fill(0)),
+  visit, // To keep track of visited Verticies
+  Row = grid.length,
+  Col = grid[0].length,
 ) {
-  console.log(visited);
-  const Row = grid.length;
-  const Col = grid[0].length;
-  // Base Cases
-  // when currRow or currCol becomes -1
-  if (currRow < 0 || currCol < 0) {
+  if (!visit) {
+    visit = [...Array(grid.length)].map((e) => Array(grid[0].length).fill(0));
+    // just to make visit as 2D array of same size as grid
+    // where visit[r][c], 0 means NOT visited and 1 means visited NODE
+  }
+  /* 
+     Base Cases:
+      1. row and col should NOT be less than 0, OUT of Bounds
+      2. row anc col should be less than their lengths, OUT of Bounds
+      3. grid[row][col] should NOT be 1, this means BLOCKED
+      4. visit[row][col] should NOT be 1, this means ALREADY VISITED vertex
+      
+      if any one is true, return 0.
+  */
+  if (
+    currRow < 0 ||
+    currCol < 0 ||
+    currRow == Row ||
+    currCol == Col ||
+    grid[currRow][currCol] == 1 ||
+    visit[currRow][currCol] == 1
+  ) {
     return 0;
   }
-  // when currRow or currCol goes out of bounds
-  if (currRow == Row || currCol == Col) {
-    return 0;
-  }
-  // when grid[r][c] hits 1
-  if (grid[currRow][currCol] == 1) {
-    return 0;
-  }
-  // when you reach the destinaion return 1
-  // as this is a valid path
-  if (currRow == Row - 1 && (currCol = Col - 1)) {
+
+  // When you reach the destination which is last index, return 1
+  // this means a valid path is found.
+  if (currRow == Row - 1 && currCol == Col - 1) {
     return 1;
   }
-  if (!visited[currRow][currCol]) {
-    visited[currRow][currCol] = 1;
-  } else {
-    return 0;
-  }
+
+  // Reaching here means the Vertex was NOT visied earlier
+  // So now mark it as visited
+  visit[currRow][currCol] = 1;
+
+  // Initialize count as 0
   let count = 0;
 
-  // up
-  count = count + dfs(grid, currRow - 1, currCol, visited);
   // right
-  count = count + dfs(grid, currRow, currCol + 1, visited);
+  count += dfs(grid, currRow, currCol + 1, visit);
+
   // down
-  count = count + dfs(grid, currRow + 1, currCol, visited);
+  count += dfs(grid, currRow + 1, currCol, visit);
+
   // left
-  count = count + dfs(grid, currRow, currCol - 1, visited);
+  count += dfs(grid, currRow, currCol - 1, visit);
+
+  // up
+  count += dfs(grid, currRow - 1, currCol, visit);
+
   // removed from visited
-  visited[currRow][currCol] = 0;
+  visit[currRow][currCol] = 0;
   return count;
+
+  // Space : O()
+  // Time : O()
 }
 console.log(dfs(grid));
