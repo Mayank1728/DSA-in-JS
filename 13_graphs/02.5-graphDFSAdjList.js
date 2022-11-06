@@ -4,11 +4,6 @@
   There are 2 ways of implementing DFS
    1. Recursive
    2. Iterative (using stack)
-  
-  There are 3 types of DFS
-   1. InOrder
-   2. PreOrder
-   3. PostOrder
 
 */
 const adjList = {
@@ -19,15 +14,31 @@ const adjList = {
   e: ['b', 'a'],
   f: ['d'],
 };
+// let adjList = {
+//   A: ['B', 'C'],
+//   B: ['A', 'D', 'E'],
+//   C: ['A', 'F'],
+//   D: ['B'],
+//   E: ['B', 'F'],
+//   F: ['C', 'E'],
+// };
 
-// Recursive Approach
+// 1. Recursive Approach
 function dfs(adjList, start, map = {}) {
+  // first mark start as visited
   map[start] = true;
-  for (let neighbour in adjList[start]) {
+  // Now loop through each neighbour of start
+  for (let neighbour of adjList[start]) {
+    // if Neighbour is NOT yet visited
     if (!map[neighbour]) {
+      // make neighbour as the new start node
       dfs(adjList, neighbour, map);
     }
   }
+  // reching here means its a dead end or leaf node
+  // you can't go deeper so print the value of start.
   console.log(start);
 }
-dfs(adjList, 'a');
+dfs(adjList, 'A');
+
+// 2. Iterative approach using stack
