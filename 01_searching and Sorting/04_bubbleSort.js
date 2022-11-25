@@ -7,7 +7,12 @@
             Else it needs to be sorted
         
         2. Passes Variable
-            After each pass the largest value will bubble at the end
+            Keeps track of number of passes our array went through.
+            Passes means no of iterations done by outermost loop.
+            WHY do we need it ?
+            To optimize our code. As we know that,
+            After 1st pass -> last element is at the correct position
+            After 2nd pass -> 2nd element too will be at the correct position...
 
         MOST IMPORTANT PART this optimizes our code
 
@@ -58,11 +63,11 @@ function bubbleSort(arr) {
 }
 bubbleSort([5, 10, 134, 2, 3, 8, 16, 4, 2]);
 
-// Time complexity: O(n^2)
+// Time complexity: O(N^2)
 // Space complexity: O(1)
 
 /*
-    Why time complexity is O(n^2) ?
+    Why time complexity is O(N^2) ?
 
     lets consider the worst case that the array is sorted in dec order
     Ex - Array : [40, 30, 20, 10]
@@ -93,5 +98,5 @@ bubbleSort([5, 10, 134, 2, 3, 8, 16, 4, 2]);
           = (N - 1) + (N - 2) + (N - 3) + .. + 1
           = N(N - 1)/2
   
-    So, Time complexity = O(n^2)
+    So, Time complexity = O(N^2)
 */
