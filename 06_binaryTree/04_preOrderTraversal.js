@@ -32,27 +32,13 @@ class binaryTree {
     this.root = null;
   }
   preOrder(node = this.root) {
-    // BASE CASE : when to stop ?
-    // if node is null then STOP
     if (!node) return;
 
-    // print the node value
     console.log(node.val);
 
-    // if left node exists
-    if (node.left) {
-      // then the left node is traversed
-      // Recursive call
+    this.preOrder(node.left);
 
-      this.preOrder(node.left);
-    }
-
-    // if right node exists
-    if (node.right) {
-      // then the right node is traversed
-      // Recursive call
-      this.preOrder(node.right);
-    }
+    this.preOrder(node.right);
   }
   insert(val) {
     if (!this.root) {
@@ -89,7 +75,19 @@ class binaryTree {
             traverse = traverse.right;
           }
         }
-        console.log(this.root);
+      }
+    }
+  }
+  preOrderIt() {
+    let stack = [this.root];
+    while (stack.length) {
+      let curr = stack.pop();
+      console.log(curr.val);
+      if (curr.right) {
+        stack.push(curr.right);
+      }
+      if (curr.left) {
+        stack.push(curr.left);
       }
     }
   }
@@ -101,8 +99,7 @@ directory.insert(6);
 directory.insert(5);
 directory.insert(1);
 directory.insert(2);
-console.log(directory);
-directory.preOrder();
+directory.preOrderIt();
 
 /*
   Here N means null
