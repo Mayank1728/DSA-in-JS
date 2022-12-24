@@ -1,6 +1,9 @@
 /*
     Implementing the insert function :The insert function will add values 
     in the binary tree
+    Important Note: It doesn't add values to the tree 
+    in such a order that all the values to the left of the parent node are 
+    smaller and all the values to the right of the parent node are greater.
         
         Algorithm
         1. if tree is empty, make val as root node
@@ -40,12 +43,6 @@ Visualization: https://algorithm-visualizer.org/brute-force/binary-tree-traversa
 To-DO:
   => add quote on every topic
   => why linked list etc were created etc and tradeoffs.
-
-
-Important Note: This insert function is just to add values to a binary tree
-It doesn't add values to the tree in such a order that all the values
-to the left of the parent node are smaller and all the values to the
-right of the parent node are greater.
 
 */
 class Node {
@@ -96,6 +93,14 @@ class binaryTree {
         }
         console.log(this.root);
       }
+    }
+  }
+  in(val) {
+    let car = this.root;
+    if (!car) {
+      car = new Node(val);
+    } else {
+      while (1) {}
     }
   }
 }

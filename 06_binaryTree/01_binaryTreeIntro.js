@@ -1,24 +1,24 @@
 /*
-           Trees
+    Trees
    
-    1. Difference between linear and non linear data structure
+        1. Difference between linear and non linear data structure
 
-        Linear data structure like arrays, linkedList, stack and queues are
-        stored in a SEQUENTIAL manner (one after the another)
-        
-        Trees are non-linear data structure which means they are stored 
-        NON-SEQUENTIALLY.
-        Trees contains levels.
+            Linear data structure like arrays, linkedList, stack and queues are
+            stored in a SEQUENTIAL manner (one after the another)
+            
+            Trees are non-linear data structure which means they are stored 
+            NON-SEQUENTIALLY.
+            Trees contains levels.
     
 
-            Binary Tree
+    Binary Tree
 
-    2. A Tree is considered a Binary Tree IF it satisfies all 3 conditions:
-        2.1 It contains EXACTLY 1 ROOT NODE 
-            ROOT node: The node which has no parent.
-        2.2 every PARENT node has AT MOST 2 CHILDREN(it can be 0, 1, or 2 children)
-        2.3 EXACTLY 1 PATH from ROOT node to any other node
-            In other words, there should be NO CYCLE in the Tree.
+        2. A Tree is considered a Binary Tree IF it satisfies all 3 conditions:
+            2.1 It contains EXACTLY 1 ROOT NODE 
+                ROOT node: The node which has no parent.
+            2.2 every PARENT node has AT MOST 2 CHILDREN(it can be 0, 1, or 2 children)
+            2.3 EXACTLY 1 PATH from ROOT node to any other node
+                In other words, there should be NO CYCLE in the Tree.
 
     
     Terminology:
@@ -38,11 +38,11 @@
             5. Trie: used to store dicitionary.
 
 
-    DEPTH of x node: the PATH from root node to x node
+    DEPTH of node x : Distance from root node to node x
                                 OR 
-                     no of edges from root node to x node
+                     no of edges from root node to node x
     
-    height of x node: the LONGEST PATH from x node to the leaf node.
+    height of node x: the LONGEST PATH from node x to the leaf node.
 
     Height of a tree:  is longest path from ROOT node to LEAF node.
 

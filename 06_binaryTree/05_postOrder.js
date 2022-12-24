@@ -35,52 +35,29 @@ class binaryTree {
   postOrder(node = this.root) {
     if (!node) return;
 
-    if (node.left) {
-      this.postOrder(node.left);
-    }
+    this.postOrder(node.left);
 
-    if (node.right) {
-      this.postOrder(node.right);
-    }
+    this.postOrder(node.right);
 
     console.log(node.val);
   }
   preOrder(node = this.root) {
-    // Break statement : when to stop ?
-    // if node is null STOP
     if (!node) return;
 
-    // push the node value inside the array
-    // Base case
     console.log(node.val);
 
-    // if left node exists ()
-    if (node.left) {
-      // then the left node is traversed
-      // Recursive call
+    this.preOrder(node.left);
 
-      this.preOrder(node.left);
-    }
-
-    // if right node exists
-    if (node.right) {
-      // then the right node is traversed
-      // Recursive call
-      this.preOrder(node.right);
-    }
+    this.preOrder(node.right);
   }
   inOrder(node = this.root) {
     if (!node) return;
 
-    if (node.left) {
-      this.inOrder(node.left);
-    }
+    this.inOrder(node.left);
 
     console.log(node.val);
 
-    if (node.right) {
-      this.inOrder(node.right);
-    }
+    this.inOrder(node.right);
   }
   insert(val) {
     if (!this.root) {

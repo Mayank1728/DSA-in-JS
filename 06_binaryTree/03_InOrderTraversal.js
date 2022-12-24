@@ -44,44 +44,21 @@ class binaryTree {
     // if node is null STOP
     if (!node) return;
 
-    // push the node value inside the array
-    // Base case
     console.log(node.val);
 
-    // if left node exists ()
-    if (node.left) {
-      // then the left node is traversed
-      // Recursive call
+    this.preOrder(node.left);
 
-      this.preOrder(node.left);
-    }
-
-    // if right node exists
-    if (node.right) {
-      // then the right node is traversed
-      // Recursive call
-      this.preOrder(node.right);
-    }
+    this.preOrder(node.right);
   }
   inOrder(node = this.root) {
     // if node is null return
     if (!node) return;
 
-    // if left of node exists, RECURSIVELY call the function
-    // with node.left as new root
-    if (node.left) {
-      this.inOrder(node.left);
-    }
+    this.inOrder(node.left);
 
-    // after traversing the left side
-    // print the node value
     console.log(node.val);
 
-    // if right exits , RECURSIVELY call the function
-    // with node.right as new root
-    if (node.right) {
-      this.inOrder(node.right);
-    }
+    this.inOrder(node.right);
   }
   insert(val) {
     if (!this.root) {
