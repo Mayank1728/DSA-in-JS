@@ -26,6 +26,6 @@ RESOURCES I personally liked and used <br>
 7. Neima Moshiri : https://www.youtube.com/playlist?list=PLM_KIlU0WoXmkV4QB1Dg8PtJaHTdWHwRS <br>
 8. 
 
-I didn't use but you might like
-C++ saurab shukla (Hinid) : https://www.youtube.com/playlist?list=PLLYz8uHU480j37APNXBdPz7YzAi4XlQUF <br>
-San Diego : https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk <br>
+I didn't use but you might like <br>
+1. C++ saurab shukla (Hinid) : https://www.youtube.com/playlist?list=PLLYz8uHU480j37APNXBdPz7YzAi4XlQUF <br>
+2. San Diego : https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk <br>
