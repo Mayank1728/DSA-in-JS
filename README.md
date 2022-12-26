@@ -6,7 +6,7 @@ My LeetCode Profile: https://leetcode.com/Sapien17/ <br>
 Obviously you should watch Neetcode.io, Kevin Naughton Jr, Nick White, Tushar roy solutions. <br>
 
 Introduction to Computer Science and Python <br>
-1. MITOCW Intro to CS [python]: https://www.youtube.com/playlist?list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA <br>
+1. MITOCW Intro to CS [python]: https://www.youtube.com/playlist?list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA   <br>
 2. MITOCW Data Structures & Algorithms : https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY <br>
 3. EdX CS50 [very very hard, recommended if you have ] : https://www.edx.org/course/introduction-computer-science-harvardx-cs50x 
 
