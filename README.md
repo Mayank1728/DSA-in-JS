@@ -25,7 +25,7 @@ RESOURCES I personally liked and used <br>
 5. Data Structures and Algorithms with JavaScript [book]: https://www.oreilly.com/library/view/data-structures-and/9781449373931/ <br>
 6. IITD : https://www.youtube.com/playlist?list=PLBF3763AF2E1C572F <br>
 7. Neima Moshiri : https://www.youtube.com/playlist?list=PLM_KIlU0WoXmkV4QB1Dg8PtJaHTdWHwRS <br>
-8. Kunal Kushwaha: https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ <br
+8. Kunal Kushwaha: https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ <br>
 
 I didn't use but you might like <br>
 1. C++ saurab shukla (Hinid) : https://www.youtube.com/playlist?list=PLLYz8uHU480j37APNXBdPz7YzAi4XlQUF <br>
