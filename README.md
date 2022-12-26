@@ -18,6 +18,7 @@ Books <br>
 1. CTCI <br>
 2. EPI <br>
 3. Programming Interviews Exposed <br>
+4. Data Structures and Algorithms with JavaScript <br>
 
 Visualization Sorting Algorithm visualizations: https://www.toptal.com/developers/sorting-algorithms <br>
 Get courses from HacksNation, tutflix and other sites on r/piracy. <br>
@@ -27,10 +28,9 @@ RESOURCES I personally liked and used <br>
 2. myCodeSchool: https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P <br>
 3. AlgoExpert[paid 50$ during sale, but definately worth it]: https://www.algoexpert.io/product <br>
 4. Interviewcamp [great videos, didn't buy although] : https://interviewcamp.io/ <br>
-5. Data Structures and Algorithms with JavaScript [book]: https://www.oreilly.com/library/view/data-structures-and/9781449373931/ <br>
-6. IITD : https://www.youtube.com/playlist?list=PLBF3763AF2E1C572F <br>
-7. Neima Moshiri : https://www.youtube.com/playlist?list=PLM_KIlU0WoXmkV4QB1Dg8PtJaHTdWHwRS <br>
-8. Kunal Kushwaha: https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ <br>
+5. IITD : https://www.youtube.com/playlist?list=PLBF3763AF2E1C572F <br>
+6. Neima Moshiri : https://www.youtube.com/playlist?list=PLM_KIlU0WoXmkV4QB1Dg8PtJaHTdWHwRS <br>
+7. Kunal Kushwaha: https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ <br>
 
 I didn't use but you might like <br>
 1. C++ saurab shukla (Hinid) : https://www.youtube.com/playlist?list=PLLYz8uHU480j37APNXBdPz7YzAi4XlQUF <br>
