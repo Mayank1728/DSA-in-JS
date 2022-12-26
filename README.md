@@ -14,8 +14,13 @@ Resources for learning JavaScript <br>
 1. Complete path to JavaScript Mastery: https://javascript-mastery.teachable.com/p/completepathtojavascriptmastery <br>
 2. The complete JavaScript Course 2022: https://www.udemy.com/course/the-complete-javascript-course/ <br>
 
+Books <br>
+1. CTCI <br>
+2. EPI <br>
+3. Programming Interviews Exposed <br>
+
 Visualization Sorting Algorithm visualizations: https://www.toptal.com/developers/sorting-algorithms <br>
-Get courses from HacksNation, tutflix and other sites on r/piracy.
+Get courses from HacksNation, tutflix and other sites on r/piracy. <br>
 
 RESOURCES I personally liked and used <br>
 1. JavaScript Algorithms and Data Structures: https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/ <br>
