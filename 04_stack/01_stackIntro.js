@@ -1,30 +1,53 @@
 /*
    What is stack ?
-   Stack is a Data Structure which uses LIFO(Last In First Out)
-   principle.
-   You insert and delete element from THE SAME END AKA TOP.
+   Stack is a LIFO(Last In First Out) Data Structure. 
+   You insert and delete element from ONE END AKA TOP.
 
+   Let's imagine a Column of tennis ball. These balls are stacked on top
+   of each other. Now, the ball which is placed at last will 
+   come out first. 
+   This is LIFO. Remember you can only insert at the top and 
+   remove from the top.
 
-   Let's consider a stack of clothes. The cloth you stakced on
-   the top is the last cloth. Now When you want a cloth, the
-   cloth you inserted at last will come out first. 
-   This is LIFO.
-   You might ask yourself how to access my favourite shirt which
-   is in between the clothes stack ?
-   Thats the NEAT part you can't.
-   You can only insert at the top and remove from the top.
+   Why do we use Stack ?
+      We use stack when we want CONSTANT TIME push (adding element)
+      and CONSTANT TIME pop (removing element) operations.
+      NOTE : We cannot access the elements in between the stack.
+             We can access only the topmost element.
+      Time complexity: Push O(1), Pop O(1), Searching O(N)
+      Space complexity: O(N)
+
 
    Real Life Examples of Stack
-   1. Clothes inside a suitcase, clothes you packed last will come out first.
-   2. When adding Songs to a playlist, the songs added last are played first.
-   3. opening a bread packet
+   1. Column of tennis balls.
+   2. Bread packet
    
-   Stacks can be implemented with 
+
+   Stack Class can be implemented with 
    1. Arrays
    2. LinkedLists
 
-   I will implement stack with arrays as well as linkedList.
-   
-   Time complexity: Insertion O(1) and Deletion O(1)
-   Space complexity: O(n)
+
+   Where is Stack used in programming ?
+      1. Function calls : 
+            How does the program remembers in which order functions were
+            called and which function it needs to return back to.
+      
+      2. Call Stack : 
+            Fuction calls present in the stack memory during recursive calls.
+      
+      3. Implementing Depth First Search[DFS] :
+            Stack is used for traversing graphs using DFS approach.
+
+      4. Evulating expressions: 
+            How do operations like add, sub etc happen inside the computer ? 
+            Normal expressions(Infix) are converted into postFix or preFix.
+            Infix(Human readable) : 2 + 3 / 6 * 9 = (2 + ((3 / 6) * 9))
+               <operand> <operator> <operand>
+            PostFix:  2 3 6 / 9 * + ()
+               <operand> <operand> <operator>
+            PreFix :  + 2 * / 3 6 9
+               <operator> <operand> <operand>
+            Watch mycodeschool videos for more Information.
+
 */

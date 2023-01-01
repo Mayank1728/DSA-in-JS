@@ -1,9 +1,30 @@
 /*
-   Implementing Stack using Linked List
-    1. push(val) to insert values on top of the stack
-    2. pop() to remove values from the top of the stack
-    3. top() display current value at the top of stack
-    4. show() to display all the values in the stack(top to bottom)
+   Implementing Stack Class using Linked List
+
+    1. push(val) : pushes value at the top of stack
+    2. pop() : removes topmost value from the stack
+    3. top() : displays the topmost value in the stack AKA peek
+    4. isEmpty() : returns true if empty else returns false
+    
+    Each operation is implemented in O(1) time 
+    and space used by stack is O(N) where N is no of elements.
+*/
+
+/* 
+   How is this Stack class working ?
+
+    Traditionally Singly LinkedList looks like this
+    "rose" -> "sunflower" -> "jasmine" -> "lilies" -> "Lavender"
+     Head                                               Tail
+   
+     
+    Instead of having a head and tail I have just top
+    "Lavendar" -> "Lilies" -> "Jasmine" -> "sunflower" -> "rose"
+      Top                                   
+
+    As it will become easier to pop the last element and move
+    move to the next node in O(1) time.
+
 */
 
 class Node {
@@ -15,56 +36,44 @@ class Node {
 
 class Stack {
   constructor() {
-    this.head = null;
-    this.tail = null;
+    this.top = null;
     this.length = 0;
   }
   push(val) {
-    // add value on the top
-    if (!this.head) {
-      this.head = new Node(val);
-      this.tail = this.head;
-    } else {
-      let traverse = this.head;
-      // to reach the topmost/last node in the stack
-      while (traverse.next) {
-        traverse = traverse.next;
-      }
-      traverse.next = new Node(val);
-      this.tail = traverse.next;
-    }
+    let currNode = new Node(val);
+    currNode.next = this.top;
+    this.top = currNode;
     this.length++;
+
+    // Time : O(1)
   }
   pop() {
-    // remove val/element from the top of the stack
-    if (!this.head) return null;
-    if (this.length === 1) {
-      this.head = null;
-      this.tail = null;
-      this.length = 0;
-    } else {
-      let prev = this.head;
-      let curr = this.head.next;
-      while (curr.next) {
-        curr = curr.next;
-        prev = prev.next;
-      }
-      prev.next = null;
-      this.tail = prev;
-      this.length--;
+    if (!this.top) {
+      console.log('The Stack is EMPTY!!');
+      return false;
     }
+    const removed = this.top.val;
+    this.top = this.top.next;
+    console.log(`${removed} was popped!!`);
+    this.length--;
+    return removed;
+
+    // Time : O(1)
   }
-  show() {
-    let traverse = this.head;
-    while (traverse) {
-      console.log(traverse.val);
-      console.log();
-      traverse = traverse.next;
+  peek() {
+    if (!this.top) {
+      console.log('The Stack is EMPTY!!');
+      return false;
     }
+    console.log(this.top.val);
+    return this.top.val;
+
+    // Time : O(1)
   }
-  top() {
-    if (!this.head) return null;
-    console.log(this.tail.val);
+  isEmpty() {
+    return this.top === null;
+
+    // Time : O(1)
   }
 }
 
@@ -79,7 +88,7 @@ books.push('Guns Germs and Steel');
 books.push('Predictably irrational');
 books.push('Extreme ownership');
 books.push('The selfish gene');
-books.top();
 books.pop(); // the selfish gene out
-books.top();
+books.peek();
 console.log(books.length);
+console.log(books);
