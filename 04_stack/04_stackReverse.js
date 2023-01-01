@@ -58,9 +58,3 @@ books.push('Extreme ownership');
 books.push('The selfish gene');
 books.show();
 console.log();
-let temp1 = new Stack();
-while (books.length) {
-  temp1.push(books.pop());
-}
-books = temp1;
-books.show();

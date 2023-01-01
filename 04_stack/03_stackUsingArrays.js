@@ -1,5 +1,6 @@
 /*
    Implementing Stack using Arrays
+   
     1. push(val) to insert values on top of the stack
     2. pop() to remove values from the top of the stack
     3. top() display current value at the top of stack
