@@ -21,6 +21,8 @@
    Real Life Examples of Stack
    1. Column of tennis balls.
    2. Bread packet
+   3. ctrl + Z (Undo option)
+   4. going back in firefox or chrome
    
 
    Stack Class can be implemented with 
