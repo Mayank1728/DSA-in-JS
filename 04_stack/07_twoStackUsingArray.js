@@ -1,4 +1,5 @@
 // Implement 2 stacks using 1 Array
+
 class TwoStacks {
   constructor(size) {
     this.array = new Array(size);
