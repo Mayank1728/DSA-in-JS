@@ -22,7 +22,7 @@
    1. Column of tennis balls.
    2. Bread packet
    3. ctrl + Z (Undo option)
-   4. going back in firefox or chrome
+   4. going to previous or last visited webpage in firefox
    
 
    Stack Class can be implemented with 
@@ -33,7 +33,8 @@
    Where is Stack used in programming ?
       1. Function calls : 
             How does the program remembers in which order functions were
-            called and which function it needs to return back to.
+            called and which function it needs to return back to. It is 
+            by using the stack.
       
       2. Call Stack : 
             Fuction calls present in the stack memory during recursive calls.

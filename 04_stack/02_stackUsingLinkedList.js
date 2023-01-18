@@ -3,15 +3,15 @@
 
     1. push(val) : pushes value at the top of stack
     2. pop() : removes topmost value from the stack
-    3. top() : displays the topmost value in the stack AKA peek
-    4. isEmpty() : returns true if empty else returns false
+    3. top() : displays/returns the topmost value from the stack AKA peek
+    4. isEmpty() : returns true if stack is empty otherwise returns false
     
     Each operation is implemented in O(1) time 
     and space used by stack is O(N) where N is no of elements.
 */
 
 /* 
-   How is this Stack class working ?
+   Working of Stack class using LinkedList ?
 
     Traditionally Singly LinkedList looks like this
     "rose" -> "sunflower" -> "jasmine" -> "lilies" -> "Lavender"
