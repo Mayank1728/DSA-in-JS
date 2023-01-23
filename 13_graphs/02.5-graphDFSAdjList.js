@@ -4,7 +4,6 @@
   There are 2 ways of implementing DFS
    1. Recursive
    2. Iterative (using stack)
-   Todo:  debug it once more!
 */
 const adjList = {
   a: ['b', 'c'],
@@ -45,15 +44,14 @@ dfs(adjList, 'a');
 // 2. Iterative approach using stack
 function dfsIterative(adjList, source = 'a') {
   let stack = [source];
-  let map = {};
-  map[source] = true;
+  let isVisited = {};
   while (stack.length > 0) {
-    let currNode = stack.pop();
-    console.log(currNode);
-    for (neighbour of adjList[currNode]) {
-      if (!map[neighbour]) {
-        map[neighbour] = true;
-        stack.push(neighbour);
+    let curr = stack.pop();
+    if (!isVisited[curr]) {
+      console.log(curr);
+      isVisited[curr] = true;
+      for (let i = 0; i < adjList[curr].length; i++) {
+        stack.push(adjList[curr][i]);
       }
     }
   }
@@ -61,4 +59,3 @@ function dfsIterative(adjList, source = 'a') {
 dfsIterative(adjList);
 // Time : O(V + E) why ? don't know exactly
 // Space : O(V) lets consier a grap have V nodes connected like linkedList
-// so at worst there will be V call frames at same time so O(V) space
