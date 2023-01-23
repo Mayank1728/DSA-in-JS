@@ -10,16 +10,16 @@ const adjList = {
   f: ['d'],
 };
 
-// 1. BFS implemented using Queue
-function bfs(adjList, source) {
-  let queue = [source];
-  let map = {};
-  while (queue.length > 0) {
-    let currNode = queue.shift();
-    map[currNode] = true;
-    console.log(currNode);
-    for (neighbour of adjList[currNode]) {
-      if (!map[neighbour]) {
+// BFS implemented using Queue
+function bfs(adjList) {
+  let queue = ['a'];
+  let isVisited = {};
+  while (queue.length) {
+    let curr = queue.shift();
+    if (!isVisited[curr]) {
+      console.log(curr);
+      isVisited[curr] = true;
+      for (neighbour of adjList[curr]) {
         queue.push(neighbour);
       }
     }
@@ -28,6 +28,3 @@ function bfs(adjList, source) {
 bfs(adjList, 'a');
 // Time : O()
 // Space : O()
-
-// 2. BFS implemented using Recursion
-function bfsRecursive(adjList, source, map = {}) {}
