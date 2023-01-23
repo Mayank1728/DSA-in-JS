@@ -22,24 +22,17 @@ const adjList = {
 //   F: ['C', 'E'],
 // };
 
-// why we don't have a base case here ?
 // 1. Recursive Approach
-function dfs(adjList, start, map = {}) {
-  // first mark start as visited
-  map[start] = true;
-  console.log(start);
-  // Now loop through each neighbour of start
-  for (let neighbour of adjList[start]) {
-    // if Neighbour is NOT yet visited
-    if (!map[neighbour]) {
-      // make neighbour as the new start node
-      dfs(adjList, neighbour, map);
+function dfs(adjList, curr = 'a', isVisited = {}) {
+  if (!isVisited[curr]) {
+    console.log(curr);
+    isVisited[curr] = true;
+    for (let neighbour of adjList[curr]) {
+      dfs(adjList, neighbour, isVisited);
     }
   }
-  // reching here means its a dead end or leaf node
-  // you can't go deeper so print the value of start.
 }
-dfs(adjList, 'a');
+dfs(adjList);
 
 // 2. Iterative approach using stack
 function dfsIterative(adjList, source = 'a') {
@@ -50,7 +43,10 @@ function dfsIterative(adjList, source = 'a') {
     if (!isVisited[curr]) {
       console.log(curr);
       isVisited[curr] = true;
-      for (let i = 0; i < adjList[curr].length; i++) {
+      // iterating from the last and then pusing in the stack
+      // so that the order of this is same as the recursive
+      // approach
+      for (let i = adjList[curr].length - 1; i > -1; i--) {
         stack.push(adjList[curr][i]);
       }
     }
