@@ -10,6 +10,7 @@ const adjList = {
   f: ['d'],
 };
 
+// update so that it works for disconnected graph
 // BFS implemented using Queue
 function bfs(adjList) {
   let queue = ['a'];
