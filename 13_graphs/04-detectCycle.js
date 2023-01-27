@@ -1,7 +1,7 @@
 /* 
    Find whether the given graph contains cycle
    cycle: A path where starting and end vertices are same.
-   Note this code is for connected Graph ONLY.
+   Works for connected or disconnected graphs.
    TechieDelight good website for DSA questions
 */
 const adjList = {
@@ -25,9 +25,11 @@ function detectCycle(adjList) {
   }
   console.log(isCyclic);
   return isCyclic;
+  // Time : O(V + E)
+  // Space : O(V + E)
 }
 
-function dfs(vertex, adjList, discovered, isCyclic) {
+function dfs(vertex, adjList, discovered) {
   let stack = [vertex];
   while (stack.length) {
     let curr = stack.pop();

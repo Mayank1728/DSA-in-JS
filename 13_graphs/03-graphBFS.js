@@ -27,5 +27,5 @@ function bfs(adjList) {
   }
 }
 bfs(adjList, 'a');
-// Time : O()
-// Space : O()
+// Time : O(V + E)
+// Space : O(V)
