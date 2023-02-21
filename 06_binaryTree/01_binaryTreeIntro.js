@@ -20,12 +20,34 @@
             2.3 EXACTLY 1 PATH from ROOT node to any other node
                 In other words, there should be NO CYCLE in the Tree.
 
+    Complete Binary Tree:
+        A tree in which all the levels are filled. Exception is
+        made for the last level which can be filled paritally
+        BUT from left to right.
+    
+    
+    Full Binary Tree:
+        Every Node has 0 or 2 children
+    
     
     Terminology:
         root node: node WITHOUT a PARENT node
         leaf node: node with NO CHILDREN
         sibling: nodes with same parent
         edge: connection b/w 2 nodes
+
+    DEPTH of NODE x :  Distance from root node to node x
+                                    OR 
+                       no of edges from root node to node x
+    
+    HEIGHT of NODE x: the LONGEST PATH from node x to the leaf node.
+
+    HEIGHT of a TREE:  is longest path from ROOT node to LEAF node.
+
+    
+    Balanced Tree:
+        Tree is balanced when for EACH NODE difference between 
+        left and right subtree is 1 OR 0.
 
 
     Real World Examples:
@@ -38,18 +60,13 @@
             5. Trie: used to store dicitionary.
 
 
-    DEPTH of node x : Distance from root node to node x
-                                OR 
-                     no of edges from root node to node x
-    
-    height of node x: the LONGEST PATH from node x to the leaf node.
-
-    Height of a tree:  is longest path from ROOT node to LEAF node.
-
-
     Other types of trees
-        => binary Search tree
-        => AVL etc
+        => binary Trees
+        => binary Search Trees
+        => AVL Trees
+        => Red Black Trees
+        => 2-3 Trees
+        => N-ary Tree : an N-ary tree is a rooted tree in which each node has no more than N children
 
 
 */

@@ -17,5 +17,7 @@ function noOfEdges(adjList) {
   }
   console.log(directedEdges / 2);
   return directedEdges / 2;
+  // Time : O(V) for looping through vertices
+  // Space : O(V) for the array
 }
 noOfEdges(adjList);
