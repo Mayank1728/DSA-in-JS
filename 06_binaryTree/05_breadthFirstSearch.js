@@ -22,10 +22,20 @@
                 / \
                5   N
 */
+
 function bfs(node) {
   let queue = [];
   queue.push(node);
   let results = [];
+  while (queue.length) {
+    let curr = queue.shift();
+    results.push(curr.val);
+    if (curr.left) queue.push(curr.left);
+    if (curr.right) queue.push(curr.right);
+  }
+  console.log(results);
+  // Time : O(N)
+  // Space : O(N)
 }
 class Node {
   constructor(val) {
@@ -72,12 +82,8 @@ directory.insert(5);
 directory.insert(1);
 directory.insert(2);
 console.log(directory);
-console.log('inOrder Traversal');
-inOrder(directory.root);
-console.log('preOrder Traversal');
-preOrder(directory.root);
-console.log('postOrder Traversal');
-postOrder(directory.root);
+console.log('Breadth First Search');
+bfs(directory.root);
 
 /*
   Here N means null
