@@ -1,32 +1,58 @@
-/*
-  Breadth First Search AKA Level Order
+// inOrder, preOrder, postOrder Iterative implementaion
 
-  In breadth first search you traverse all the neighbouring nodes first then move to the next level.
-
-  Here N means null
-    Our tree looks like this:
-    
-    preOrder = [3,1,2,4,6,5]
-    
-    inOrder = [1,2,3,4,5,6]
-
-    postOrder = [2,1,5,6,4,3]
-    
-    BFS = [3,1,4,2,6,5]
-          
-             3
-          /    \
-         1      4 
-        / \    / \
-        N  2  N  6
-                / \
-               5   N
-*/
-function bfs(node) {
-  let queue = [];
-  queue.push(node);
-  let results = [];
+function inOrder(node) {
+  let stack = [];
+  let curr = node;
+  let result = [];
+  while (stack.length || curr) {
+    if (curr) {
+      stack.push(curr);
+      curr = curr.left;
+    } else {
+      curr = stack.pop();
+      result.push(curr.val);
+      curr = curr.right;
+    }
+  }
+  console.log(result);
+  // Time : O(N) N is total no of nodes
+  // Space : O(H) H is the height of binary tree
 }
+
+function preOrder(node) {
+  let stack = [];
+  stack.push(node);
+  let results = [];
+  while (stack.length) {
+    let curr = stack.pop();
+    results.push(curr.val);
+    if (curr.right) stack.push(curr.right);
+    if (curr.left) stack.push(curr.left);
+  }
+  console.log(results);
+  // Time : O(N)
+  // Space : O(H)
+}
+
+function postOrder(node) {
+  let stack = [];
+  stack.push(node);
+  let pre = [];
+  let result = [];
+  while (stack.length) {
+    let curr = stack.pop();
+    pre.push(curr.val);
+    if (curr.left) stack.push(curr.left);
+    if (curr.right) stack.push(curr.right);
+  }
+  while (pre.length) {
+    result.push(pre.pop());
+  }
+  console.log(result);
+  // Time : O(N)
+  // Space : O(N)
+}
+
 class Node {
   constructor(val) {
     this.val = val;

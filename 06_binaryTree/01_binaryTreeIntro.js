@@ -1,10 +1,17 @@
 /*
     Trees
-   
-        1. Difference between linear and non linear data structure
+        1. What is a Tree ? 
+            Tree is a type of GRAPH, which is collection of Vertices
+            (nodes) and Edges.
+            A graph will be called a tree when
+                a. It has a specific starting point AKA root node.
+                b. Acyclic
+                c. Each node has parent except for root node. 
+                   parent -> children
 
-            Linear data structure like arrays, linkedList, stack and queues are
-            stored in a SEQUENTIAL manner (one after the another)
+        2. Difference between linear and non linear data structure
+
+            Linear data structure like arrays, linkedList, stack and queues are stored in a SEQUENTIAL manner (one after the another)
             
             Trees are non-linear data structure which means they are stored 
             NON-SEQUENTIALLY.
@@ -18,20 +25,10 @@
                 ROOT node: The node which has no parent.
             2.2 every PARENT node has AT MOST 2 CHILDREN(it can be 0, 1, or 2 children)
             2.3 EXACTLY 1 PATH from ROOT node to any other node
-                In other words, there should be NO CYCLE in the Tree.
-
-    Complete Binary Tree:
-        A tree in which all the levels are filled. Exception is
-        made for the last level which can be filled paritally
-        BUT from left to right.
-    
-    
-    Full Binary Tree:
-        Every Node has 0 or 2 children
-    
+                In other words, there should be NO CYCLE in the Tree.    
     
     Terminology:
-        root node: node WITHOUT a PARENT node
+        root node: node WITHOUT a PARENT node AKA starting node
         leaf node: node with NO CHILDREN
         sibling: nodes with same parent
         edge: connection b/w 2 nodes
@@ -44,11 +41,26 @@
 
     HEIGHT of a TREE:  is longest path from ROOT node to LEAF node.
 
+
+    Complete Binary Tree:
+        A tree in which all the levels are filled. Exception is
+        made for the last level which can be filled paritally
+        BUT from left to right.
     
+    
+    Full Binary Tree:
+        Every Node has 0 or 2 children
+
+
     Balanced Tree:
         Tree is balanced when for EACH NODE difference between 
-        left and right subtree is 1 OR 0.
+        HEIGHT of left and right subtree is 1 OR 0.
 
+    Binary Search Tree:
+        A type of Binary Tree where values are stored in a particular
+        order. All the nodes to the left of curr are less than curr &
+        all the nodes to right of curr are greater than curr.
+    
 
     Real World Examples:
         
@@ -61,8 +73,6 @@
 
 
     Other types of trees
-        => binary Trees
-        => binary Search Trees
         => AVL Trees
         => Red Black Trees
         => 2-3 Trees
