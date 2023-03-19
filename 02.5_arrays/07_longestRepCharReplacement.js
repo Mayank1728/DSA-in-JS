@@ -8,8 +8,8 @@ function CharacterReplacement(s, k) {
   for (let i = 0; i < s.length; i++) {
     let map = {};
     for (let j = i; j < s.length; j++) {
-      if (!map[s[i]]) map[s[i]] = 1;
-      else map[s[i]] += 1;
+      if (!map[s[j]]) map[s[j]] = 1;
+      else map[s[j]] += 1;
 
       let maxF = 0;
       for (let key in map) maxF = Math.max(maxF, map[key]);
