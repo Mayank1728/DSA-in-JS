@@ -3,7 +3,7 @@
 This is Data Structures and Algorithms implemented in javaScript. <br>
 My LeetCode Profile: https://leetcode.com/Sapien17/ <br>
 
-Obviously you should watch Neetcode.io, Kevin Naughton Jr, Nick White, Tushar roy solutions. <br>
+I watch Neetcode.io, Kevin Naughton Jr, Nick White, Rohit Negi youtubers. <br>
 
 Introduction to Computer Science and Python <br>
 1. MITOCW Intro to CS [python]: https://www.youtube.com/playlist?list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA   <br>
