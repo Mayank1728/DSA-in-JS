@@ -1,14 +1,14 @@
 # DSA-in-JS
 
 This is Data Structures and Algorithms implemented in javaScript. <br>
-My LeetCode Profile: https://leetcode.com/Sapien17/ <br>
+My LeetCode Profile: https://leetcode.com/Mayank1729/ <br>
 
-I watch Neetcode.io, Kevin Naughton Jr, Nick White, Rohit Negi youtubers. <br>
+I watch Neetcode.io, Kevin Naughton Jr, Nick White, Rohit Negi youtubers.<br>
 
 Introduction to Computer Science and Python <br>
-1. MITOCW Intro to CS [python]: https://www.youtube.com/playlist?list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA   <br>
-2. MITOCW Data Structures & Algorithms : https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY <br>
-3. EdX CS50 [very very hard, recommended if you have ] : https://www.edx.org/course/introduction-computer-science-harvardx-cs50x 
+1. MITOCW Intro to CS [python]: https://www.youtube.com/playlist?list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA<br>
+2. MITOCW Data Structures & Algorithms : https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY<br>
+3. EdX CS50 [very very hard, recommended if you have ] : https://www.edx.org/course/introduction-computer-science-harvardx-cs50x<br>
 
 Resources for learning JavaScript <br>
 1. Complete path to JavaScript Mastery: https://javascript-mastery.teachable.com/p/completepathtojavascriptmastery <br>
