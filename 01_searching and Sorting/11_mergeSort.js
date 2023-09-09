@@ -86,4 +86,4 @@ function mergeArray(L, R) {
 console.log(mergeSort([5, 1, 3, 4, 6, 9]));
 
 // Time Complexity: O(NLogN)
-// Space Complexity: O(NLogN)
+// Space Complexity: O(N)
