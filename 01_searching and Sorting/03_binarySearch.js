@@ -4,7 +4,9 @@
 
 /*
                             *** Binary Search Intuition ***
-   let's say brian and bond are playing a guessing game. brian thinks of a number between [1 - 100] inclusive. Now bond has to guess that number. On each guess, Brian provides feedback on whether the number is greater than the actual number or less than the actual number.
+   let's say brian and bond are playing a guessing game. brian thinks of a number between [1 - 100] inclusive. 
+   Now bond has to guess that number. On each guess, Brian provides feedback on whether the number is greater than
+   the actual number or less than the actual number.
    
    Conversation goes like this ->
    
